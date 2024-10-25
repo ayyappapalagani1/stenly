@@ -1,0 +1,399 @@
+HTML5 Input Types
+-----------------
+HTML5 added several new input types:
+
+color
+date
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+
+Input Type Color
+----------------
+The <input type="color"> is used for input fields that should contain a color.
+
+Depending on browser support, a color picker can show up in the input field.
+
+
+Ex:
+<form>
+  Select your favorite color:
+  <input type="color" name="favcolor">
+</form>
+
+Input Type Date
+---------------
+The <input type="date"> is used for input fields that should contain a date.
+
+Depending on browser support, a date picker can show up in the input field.
+
+Ex:
+<form>
+  Birthday:
+  <input type="date" name="bday">
+</form>
+
+Example:
+-------
+<form>
+  Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31"><br>
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02"><br>
+</form>
+
+
+Input Type Datetime-local
+-------------------------
+The <input type="datetime-local"> specifies a date and time input field, with no time zone.
+
+Depending on browser support, a date picker can show up in the input field.
+
+
+Example
+<form>
+  Birthday (date and time):
+  <input type="datetime-local" name="bdaytime">
+</form>
+
+
+Input Type Email
+The <input type="email"> is used for input fields that should contain an e-mail address.
+
+Depending on browser support, the e-mail address can be automatically validated when submitted.
+
+Some smartphones recognize the email type, and adds ".com" to the keyboard to match email input.
+
+Example
+<form>
+  E-mail:
+  <input type="email" name="email">
+</form>
+
+Input Type Month
+----------------
+The <input type="month"> allows the user to select a month and year.
+
+Depending on browser support, a date picker can show up in the input field.
+
+Example
+<form>
+  Birthday (month and year):
+  <input type="month" name="bdaymonth">
+</form>
+
+
+Input Type Number
+-----------------
+The <input type="number"> defines a numeric input field.
+
+You can also set restrictions on what numbers are accepted.
+
+The following example displays a numeric input field, where you can enter a value from 1 to 5:
+
+Example
+<form>
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5">
+</form>
+
+
+Input Type Range
+----------------
+The <input type="range"> defines a control for entering a number whose exact value is not important (like a slider control).
+Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes:
+
+Example
+<form>
+  <input type="range" name="points" min="0" max="10">
+</form>
+
+Input Type Tel
+--------------
+The <input type="tel"> is used for input fields that should contain a telephone number.
+
+Note: The tel type is currently only supported in Safari 8.
+
+Example
+<form>
+  Telephone:
+  <input type="tel" name="usrtel">
+</form>
+
+Input Type Time
+---------------
+The <input type="time"> allows the user to select a time (no time zone).
+
+Depending on browser support, a time picker can show up in the input field.
+
+Example
+<form>
+  Select a time:
+  <input type="time" name="usr_time">
+</form>
+
+Input Type Week
+---------------
+The <input type="week"> allows the user to select a week and year.
+
+Depending on browser support, a date picker can show up in the input field.
+
+Example
+<form>
+  Select a week:
+  <input type="week" name="week_year">
+</form>
+
+
+
+-----------------------------------------------------------------------------------
+What is HTML Canvas?
+-------------------
+The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.
+
+The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+
+Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+
+
+Ex:
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+
+
+What is SVG?
+------------
+SVG stands for Scalable Vector Graphics
+SVG is used to define graphics for the Web
+SVG is a W3C recommendation
+The HTML <svg> Element
+The HTML <svg> element is a container for SVG graphics.
+
+SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+
+SVG Circle
+Ex:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+</body>
+</html>
+
+
+SVG Rectangle
+-------------
+
+Example
+<svg width="400" height="100">
+  <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
+
+SVG Rounded Rectangle
+---------------------
+Example
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+
+What is HTML Web Storage:
+-------------------------
+With web storage, web applications can store data locally within the user's browser.
+
+Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.
+
+Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.
+
+Web storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data.
+
+
+HTML Web Storage Objects
+-------------------------
+HTML web storage provides two objects for storing data on the client:
+
+----window.localStorage - stores data with no expiration date
+----window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+
+Ex:
+<div id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Vijay");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+
+The sessionStorage Object
+-------------------------
+The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session. The data is deleted when the user closes the specific browser tab.
+
+The following example counts the number of times a user has clicked a button, in the current session:
+
+Ex:
+
+<head>
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+</body>
+
+What is a Web Worker?
+--------------------
+When executing scripts in an HTML page, the page becomes unresponsive until the script is finished.
+
+A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background.
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+
+<script>
+var w;
+
+function startWorker() {
+    if(typeof(Worker) !== "undefined") {
+        if(typeof(w) == "undefined") {
+            w = new Worker("demo_workers.js");
+        }
+        w.onmessage = function(event) {
+            document.getElementById("result").innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+    }
+}
+
+function stopWorker() { 
+    w.terminate();
+    w = undefined;
+}
+</script>
+
+</body>
+
+
+Playing Videos in HTML
+----------------------
+Before HTML5, a video could only be played in a browser with a plug-in (like flash).
+
+The HTML5 <video> element specifies a standard way to embed a video in a web page.
+
+
+
+EX:
+<!DOCTYPE html>
+<html>
+<body>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+</body>
+
+
+The HTML <audio> Element
+------------------------
+To play an audio file in HTML, use the <audio> element:
+
+HTML Audio - How It Works
+The controls attribute adds audio controls, like play, pause, and volume.
+
+The <source> element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+
+The text between the <audio> and </audio> tags will only be displayed in browsers that do not support the <audio> element.
+
+
+
+Example
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+
+
+
+
+Playing a YouTube Video in HTML
+-------------------------------
+To play your video on a web page, do the following:
+
+Upload the video to YouTube
+Take a note of the video id
+Define an <iframe> element in your web page
+Let the src attribute point to the video URL
+Use the width and height attributes to specify the dimension of the player
+Add any other parameters to the URL (see below)
+Example - Using iFrame (recommended)
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+
+YouTube Autoplay
+----------------
+You can have your video start playing automatically when a user visits that page by adding a simple parameter to your YouTube URL.
+
+Note: Take careful consideration when deciding to autoplay your videos. Automatically starting a video can annoy your visitor and end up causing more harm than good.
+
+Value 0 (default): The video will not play automatically when the player loads.
+
+Value 1: The video will play automatically when the player loads.
+
+YouTube - Autoplay
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+</iframe>

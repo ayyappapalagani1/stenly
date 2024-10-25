@@ -1,0 +1,868 @@
+	JQuery
+	---------
+
+jQuery is a small, fast and lightweight JavaScript library.
+jQuery is platform-independent.
+jQuery means "write less do more".
+jQuery simplifies AJAX call and DOM manipulation.
+
+
+JQuery Features
+---------------
+
+HTML manipulation
+DOM manipulation
+DOM element selection
+CSS manipulation
+Effects and Animations
+AJAX
+HTML event methods
+JSON Parsing
+Extensibility through plug-ins
+
+
+
+jQuery History
+---------------
+jQuery is developed by Google. To create the  jQuery application, you need to use JavaScript file for jQuery.
+You can download the jQuery file from jquery.com or use the absolute URL of jQuery file.
+
+Ex:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+ <title>First jQuery Example</title>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+ <script type="text/javascript" language="javascript">  
+ $(document).ready(function() {  
+ $("p").css("background-color", "green");  
+ });  
+ </script>  
+ </head>  
+<body>  
+<p>The first paragraph is selected.</p>  
+<p>The second paragraph is selected.</p>  
+<p>The third paragraph is selected.</p>  
+</body>  
+</html> 
+
+
+$(document).ready() and $()
+----------------------------
+The code inserted between $(document).ready() is executed only once when page is ready for JavaScript code to execute.
+
+In place of $(document).ready(), you can use shorthand notation $() only.
+
+$(document).ready(function() {  
+$("p").css("color", "red");  
+});  
+
+The above code is equivalent to this code.
+
+$(function() {  
+$("p").css("color", "red");  
+});  
+
+
+Ex2:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+ <title>Second jQuery Example</title>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> </script> </script>  
+ <script type="text/javascript" language="javascript">  
+ $(function() {  
+ $("p").css("color", "red");  
+ });  
+ </script>  
+ </head>  
+<body>  
+<p>The first paragraph is selected.</p>  
+<p>The second paragraph is selected.</p>  
+<p>The third paragraph is selected.</p>  
+</body>  
+</html>  
+
+
+jQuery Selectors
+-----------------
+jQuery Selectors are used to select and manipulate HTML elements. They are very important part of jQuery library.
+
+With jQuery selectors, you can find or select HTML elements based on their id, classes, attributes, types and much more from a DOM.
+
+The $() factory function
+Every jQuery selector start with this sign $(). This sign is known as the factory function.
+
+1)Tag Name:	It represents a tag name available in the DOM.
+	For example: $('p') selects all paragraphs'p'in the document.
+2)Tag ID:	It represents a tag available with a specific ID in the DOM.
+	For example: $('#real-id') selects a specific element in the document that has an ID of real-id.
+3)Tag Class:	It represents a tag available with a specific class in the DOM.
+	For example: $('.real-class') selects all elements in the document that have a class of real-class.
+
+
+
+Ex:   Tagname Example
+	------------
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+ <title>First jQuery Example</title>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+ </script>  
+ <script type="text/javascript" language="javascript">  
+ $(document).ready(function() {  
+ $("p").css("background-color", "pink");  
+ });  
+ </script>  
+ </head>  
+<body>  
+<p>This is first paragraph.</p>  
+<p>This is second paragraph.</p>  
+<p>This is third paragraph.</p>  
+</body>  
+</html>  
+
+The #id Selector
+----------------
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+
+<button>Click me</button>
+
+</body>
+</html>
+
+The .class Selector
+-------------------
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".test").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2 class="test">This is a heading</h2>
+
+<p class="test">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+</body>
+</html>
+
+
+
+
+		Manipulating DOM Elements
+		--------------------------
+
+jQuery - Add Elements
+---------------------
+With jQuery, it is easy to add new elements/content.
+
+
+
+Add New HTML Content
+We will look at four jQuery methods that are used to add new content:
+
+append() - Inserts content at the end of the selected elements
+prepend() - Inserts content at the beginning of the selected elements
+after() - Inserts content after the selected elements
+before() - Inserts content before the selected elements
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+});
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+
+</body>
+</html>
+
+jQuery prepend() Method
+-----------------------
+The jQuery prepend() method inserts content AT THE BEGINNING of the selected HTML elements.
+
+
+
+Ex2:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").prepend("<b>Prepended text</b>. ");
+  });
+  $("#btn2").click(function(){
+    $("ol").prepend("<li>Prepended item</li>");
+  });
+});
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">Prepend text</button>
+<button id="btn2">Prepend list item</button>
+
+</body>
+</html>
+
+
+Add Several New Elements With append() 
+======================================
+Ex3:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function appendText() {
+  var txt1 = "<p>Text.</p>";        // Create text with HTML
+  var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+  var txt3 = document.createElement("p");
+  txt3.innerHTML = "Text.";         // Create text with DOM
+  $("body").append(txt1, txt2, txt3);   // Append new elements
+}
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button onclick="appendText()">Append text</button>
+
+</body>
+</html>
+
+
+jQuery - Remove Elements
+=========================
+With jQuery, it is easy to remove existing HTML elements.
+
+
+To remove elements and content, there are mainly two jQuery methods:
+
+remove() - Removes the selected element (and its child elements)
+empty() - Removes the child elements from the selected element
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").remove();
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+This is some text in the div.
+<p>This is a paragraph in the div.</p>
+<p>This is another paragraph in the div.</p>
+
+</div>
+<br>
+
+<button>Remove div element</button>
+
+</body>
+</html>
+
+
+Ex2:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").empty();
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+This is some text in the div.
+<p>This is a paragraph in the div.</p>
+<p>This is another paragraph in the div.</p>
+
+</div>
+<br>
+
+<button>Empty the div element</button>
+
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------
+
+jQuery Manipulating CSS
+=======================
+jQuery has several methods for CSS manipulation. 
+
+addClass() - Adds one or more classes to the selected elements
+removeClass() - Removes one or more classes from the selected elements
+toggleClass() - Toggles between adding/removing classes from the selected elements
+css() -         Sets or returns the style attribute
+
+Ex1:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").addClass("blue");
+    $("div").addClass("important");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<div>This is some important text!</div><br>
+
+<button>Add classes to elements</button>
+
+</body>
+</html>
+
+Ex2:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").addClass("important blue");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<div id="div1">This is some text.</div>
+<div id="div2">This is some text.</div>
+<br>
+
+<button>Add classes to first div element</button>
+
+</body>
+</html>
+
+Ex3:
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").removeClass("blue");
+  });
+});
+</script>
+<style>
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1 class="blue">Heading 1</h1>
+<h2 class="blue">Heading 2</h2>
+
+<p class="blue">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Remove class from elements</button>
+
+</body>
+</html>
+
+Ex5:
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").toggleClass("blue");
+  });
+});
+</script>
+<style>
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Toggle class</button>
+							
+</body>
+</html>
+
+jQuery css() Method
+===================
+The css() method sets or returns one or more style properties for the selected elements.
+
+EX1:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert("Background color = " + $("p").css("background-color"));
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<button>Return background-color of p</button>
+
+</body>
+</html>
+
+Ex2:
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").css("background-color", "yellow");
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<p>This is a paragraph.</p>
+
+<button>Set background-color of p</button>
+
+</body>
+</html>
+
+
+
+
+-------------------------------------------------------------------------------------------------
+
+jQuery Events
+-------------
+jQuery events are the actions that can be detected by your web application.
+ They are used to create dynamic web pages.
+ An event shows the exact moment when something happens.
+
+These are some examples of events.
+
+A mouse click
+An HTML form submission
+A web page loading
+A keystroke on the keyboard
+Scrolling of the web page etc.
+
+Mouse Events:
+------------
+click
+dblclick
+mouseenter
+mouseleave
+
+Keyboard Events
+----------------
+keyup
+keydown
+keypress
+
+Form Events
+-----------
+submit
+change
+blur
+focus
+
+
+jQuery click()
+-------------
+When you click on an element, the click event occurs and once the click event occurs it execute the click () method or attaches a function to run.
+
+Syntax:
+
+$(selector).click()  
+It is used to trigger the click event for the selected elements.
+
+$(selector).click(function)
+
+Ex1:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+$(document).ready(function(){  
+    $("p").click(function(){  
+        alert("This paragraph was clicked.");  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+<p>Click on the statement.</p>  
+</body>  
+</html>  
+
+Ex2:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+$(document).ready(function(){  
+    $("h1,h2,h3").click(function(){  
+        $(this).hide();  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+<h1>This heading will disappear if you click on this.</h1>  
+<h2>I will also disappear.</h2>  
+<h3>Me too.</h3>  
+</body>  
+</html> 
+
+jQuery dblclick()
+----------------
+The dblclick() method is used to trigger a dblclick event or attach a function 
+to execute on double-clicking the element. 
+The event occurs when an element is clicked twice in a very short span of time.
+ It is an inbuilt method in jQuery.
+
+Ex:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>   
+</head>  
+<body>  
+<h2> This is an example of using the jQuery dblclick() method. </h2>  
+<p> Double Click the below text to see the effect. </p>  
+<p id = "p1"> Click me </p>  
+<script>  
+$(document).ready(function(){  
+$("#p1").dblclick(function(){  
+alert("You have clicked a paragraph element twice");  
+});  
+});  
+</script>  
+</body>  
+</html>  
+
+
+
+jQuery mouseenter()
+------------------
+The mouseenter() method adds an event handler function to an HTML element. This function is executed, when the mouse pointer enters the HTML element.
+
+Ex1:
+   <!DOCTYPE html>    
+<html>    
+<head>    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>    
+$(document).ready(function(){    
+    $("#h1").mouseenter(function(){    
+       $( "div" ).text( "Mouse entered on heading" ).show().fadeOut( 2000 );   
+    });    
+});    
+</script>    
+</head>    
+<body>    
+<h1 id="h1">Enter this heading.</h1>   
+<div></div>   
+</body>    
+</html>
+
+Ex2:             jQuery mouseenter()  &  mouseleave()
+		 ------------------------------------		
+
+<!DOCTYPE html>  
+<html>  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+$(document).ready(function(){  
+    $("p").mouseenter(function(){  
+        $("p").css("background-color", "red");  
+    });  
+    $("p").mouseleave(function(){  
+        $("p").css("background-color", "yellow");  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+<p>Move your mouse cursor over this statement.</p>  
+</body>  
+</html>
+-------------------------------------------------------------------------------------------
+jQuery keydown()
+---------------
+When you press a key on the keyboard, the keydown() event is occurred and 
+once the keydown() event is occurred, it executes the function associated with keydown() method to run.
+
+
+The keydown() event is generally used with two other events.
+
+Keypress() event: It specifies that the key is pressed down.
+Keyup() event: It specifies that the key is released.
+Ex:
+
+ <!DOCTYPE html>  
+<html>  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+<script>  
+$(document).ready(function(){  
+    $("input").keydown(function(){  
+        $("input").css("background-color", "green");  
+    });  
+    $("input").keyup(function(){  
+        $("input").css("background-color", "violet");  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+Write something: <input type="text">  
+</body>  
+</html>   
+
+jQuery keypress()
+----------------
+The jQuery keypress () event is occurred when a keyboard button is pressed down. This event is similar to keydown() event.
+
+Ex:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+i = 0;  
+$(document).ready(function(){  
+    $("input").keypress(function(){  
+        $("span").text (i += 1);  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+Write something: <input type="text">  
+<p>Keypresses: <span>0</span></p>  
+</body>  
+</html>
+---------------------------------------------------------------------------------------------------------
+
+
+jQuery bind()
+-------------
+The jQuery bind() event is used to attach one or more event handlers for selected elements from a set of elements. It specifies a function to run when the event occurs.
+
+Ex1:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+$(document).ready(function(){  
+    $("p").bind("click", function(){  
+        alert("This paragraph was clicked.");  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+<p>Click on the statement.</p>  
+</body>  
+</html>
+
+jQuery blur()
+--------------
+The jQuery blur event occurs when element loses focus. It can be generated by via keyboard commands like tab key or mouse click anywhere on the page.
+
+Ex:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+$(document).ready(function(){  
+    $("input").blur(function(){  
+        alert("This text box has lost its focus.");  
+    });  
+});  
+</script>  
+</head>  
+<body>  
+Enter your name: <input type="text">  
+</body>  
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

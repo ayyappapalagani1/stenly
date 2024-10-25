@@ -1,0 +1,2857 @@
+ Bootstrap
+-----------
+Bootstrap is a free front-end framework for faster and easier web development
+Bootstrap includes HTML and CSS based design templates for typography, frms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins
+Bootstrap also gives you the ability to easily create responsive designs
+
+Responsive Web Design
+---------------------
+Responsive web design is about creating web sites which automatically adjust themselves to look good on all devices, from small phones to large desktops.
+
+Why Use Bootstrap?
+------------------
+Advantages of Bootstrap:
+------------------------
+Easy to use: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap
+
+Responsive features: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops
+
+Mobile-first approach: In Bootstrap, mobile-first styles are part of the core framework
+
+Browser compatibility: Bootstrap 4 is compatible with all modern browsers (Chrome, Firefox, Internet Explorer 10+, Edge,Safari, and Opera)
+
+Where to Get Bootstrap 4?
+-------------------------
+There are two ways to start using Bootstrap 4 on your own web site.
+You can:
+
+Include Bootstrap 4 from a CDN  (or)
+Download Bootstrap 4 from getbootstrap.com
+--------------------------------------------------------------------------------------
+Containers
+-----------
+Containers are used to pad the content inside of them, and there are two container classes available:
+
+The .container class provides a responsive fixed width container
+The .container-fluid class provides a full width container, spanning the entire width of the viewport
+.container
+.container-fluid
+
+Fixed Container
+Use the .container class to create a responsive, fixed-width container.
+
+Note that its width (max-width) will change on different screen sizes:
+
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<div class="container">
+  <h1>My First Bootstrap Page</h1>
+  <p>This part is inside a .container class.</p> 
+  <p>The .container class provides a responsive fixed width container.</p>
+  <p>Resize the browser window to see that its width (max-width) will change at different breakpoints.</p>
+</div>
+
+</body>
+</html>
+
+
+Fluid Container
+---------------
+Use the .container-fluid class to create a full width container, 
+that will always span the entire width of the screen (width is always 100%):
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+<div class="container-fluid">
+  <h1>My First Bootstrap Page</h1>
+  <p>This part is inside a .container-fluid class.</p>
+  <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>           
+</div>
+
+</body>
+</html>
+
+Bootstrap Grid System
+---------------------
+The Bootstrap Grid System allows up to 12 columns across the page. 
+You can use all 12 columns individually or you can groups the columns together to create wider columns.
+
+Grid Classes:
+There are four classes in Bootstrap Grid System:
+
+xs (for phones)
+sm (for tablets)
+md (for desktops)
+lg (for larger desktops)
+You can combine the above classes to create more dynamic and flexible layouts.
+
+Bootstrap Grid Example
+---------------------
+For equal columns:
+
+<!DOCTYPE html>  
+<html lang="en">  
+  <head>  
+     <title>Job</title>  
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+  </head>  
+  <body>  
+  
+<div class="container">  
+  <h1>Grid Example</h1>  
+  
+<div class="row">  
+  <div class="col-md-3"style="background-color:lavender;">Rahul</div>  
+  <div class="col-md-3"style="background-color:lavenderblush;">Vijay</div>  
+  <div class="col-md-3"style="background-color:lavender;">Kartik</div>  
+  <div class="col-md-3"style="background-color:lavenderblush;">Ajeet</div>  
+</div>  
+  
+</div>  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+  </body>  
+</html>
+
+For unequal columns:
+--------------------
+ <!DOCTYPE html>  
+<html lang="en">  
+  <head>  
+     <title>Job</title>  
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+  </head>  
+  <body>  
+  
+<div class="container">  
+  <h1>Grid Example</h1>  
+  
+<div class="row">  
+  <div class="col-md-1"style="background-color:lavender;">Rahul</div>  
+  <div class="col-md-2"style="background-color:lavenderblush;">Vijay</div>  
+  <div class="col-md-4"style="background-color:lavender;">Kartik</div>  
+  <div class="col-md-5"style="background-color:lavenderblush;">Ajeet</div>  
+</div>  
+  
+</div>  
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+  </body>  
+</html>  
+
+Bootstrap 4 Grid Classes
+-------------------------
+There are 5 classes in Bootstrap 4 grid system.
+
+.col- (extra small devices - screen width less than 576px)
+.col-sm- (small devices - screen width equal to or greater than 576px)
+.col-md- (medium devices - screen width equal to or greater than 768px)
+.col-lg- (large devices - screen width equal to or greater than 992px)
+.col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+You can also combine the above classes to create more dynamic and flexible layouts.
+
+Equal Columns Example
+---------------------
+Example
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container-fluid">  
+  <h2>Three equal-width columns</h2>  
+  <div class="row">  
+    <div class="col" style="background-color:lavender;">.col</div>  
+    <div class="col" style="background-color:orange;">.col</div>  
+    <div class="col" style="background-color:lavender;">.col</div>  
+  
+  </div>  
+</div>  
+  
+</body>  
+</html>  
+
+Unequal Column Example
+------------------------
+Example:
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container-fluid">  
+  <h1>Unequal Columns</h1>  
+  <p>Resize the browser window to see the effect.</p>  
+  <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>  
+  <div class="row">  
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>  
+    <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8</div>  
+  </div>  
+</div>  
+      
+</body>  
+</html>
+
+Bootstrap 4 Basic Table
+----------------------
+A basic Bootstrap 4 table has a light padding and horizontal dividers.
+
+The .table class adds basic styling to a table:
+
+Ex1:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Basic Table</h2>
+  <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+
+Striped Rows
+------------
+The .table-striped class adds zebra-stripes to a table:
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+
+Bordered Table
+The .table-bordered class adds borders on all sides of the table and cells  
+
+  Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Bordered Table</h2>
+  <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+Hover Rows:
+-----------
+The .table-hover class adds a hover effect (grey background color) on table rows:
+
+Example
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Hover Rows</h2>
+  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+Black/Dark Table
+----------------
+The .table-dark class adds a black background to the table:
+
+Example
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Black/Dark Table</h2>
+  <p>The .table-dark class adds a black background to the table:</p>            
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+Dark Striped Table
+------------------
+Combine .table-dark and .table-striped to create a dark, striped table:
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Dark Striped Table</h2>
+  <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>            
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+Hoverable Dark Table
+--------------------
+The .table-hover class adds a hover effect (grey background color) on table rows:
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Hoverable Dark Table</h2>
+  <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>            
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+
+Borderless Table
+----------------
+The .table-borderless class removes borders from the table:
+
+Example
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Borderless Table</h2>
+  <p>The .table-borderless class removes borders from the table:</p>            
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+Contextual Classes
+------------------
+Contextual classes can be used to color the whole table (<table>),  the table rows (<tr>) or table cells (<td>).
+
+Example
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Contextual Classes</h2>
+  <p>Contextual classes can be used to color the table, table rows or table cells. The classes that can be used are: .table-primary, .table-success, .table-info, .table-warning, .table-danger, .table-active, .table-secondary, .table-light and .table-dark:</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Default</td>
+        <td>Defaultson</td>
+        <td>def@somemail.com</td>
+      </tr>      
+      <tr class="table-primary">
+        <td>Primary</td>
+        <td>Joe</td>
+        <td>joe@example.com</td>
+      </tr>
+      <tr class="table-success">
+        <td>Success</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="table-danger">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="table-info">
+        <td>Info</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+      <tr class="table-warning">
+        <td>Warning</td>
+        <td>Refs</td>
+        <td>bo@example.com</td>
+      </tr>
+      <tr class="table-active">
+        <td>Active</td>
+        <td>Activeson</td>
+        <td>act@example.com</td>
+      </tr>
+      <tr class="table-secondary">
+        <td>Secondary</td>
+        <td>Secondson</td>
+        <td>sec@example.com</td>
+      </tr>
+      <tr class="table-light">
+        <td>Light</td>
+        <td>Angie</td>
+        <td>angie@example.com</td>
+      </tr>
+      <tr class="table-dark text-dark">
+        <td>Dark</td>
+        <td>Bo</td>
+        <td>bo@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+Table Head Colors
+-----------------
+The .thead-dark class adds a black background to table headers, and the .thead-light class adds a grey background to table headers:
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Table Head Colors</h2>
+  <p>The .thead-dark class adds a black background to table headers, and the .thead-light class adds a grey background to table headers:</p>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+
+Small table
+-----------
+The .table-sm class makes the table smaller by cutting cell padding in half:
+
+Example:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Small Table</h2>
+  <p>The .table-sm class makes the table smaller by cutting cell padding in half:</p>
+  <table class="table table-bordered table-sm">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+Responsive Tables
+-----------------
+The .table-responsive class adds a scrollbar to the table when needed (when it is too big horizontally):
+
+Example
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Responsive Table</h2>
+  <p>The .table-responsive class adds a scrollbar to the table when needed:</p>                                                                                      
+  
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Sex</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Anna</td>
+          <td>Pitt</td>
+          <td>35</td>
+          <td>New York</td>
+          <td>USA</td>
+          <td>Female</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+Ex2:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Responsive Table</h2>
+  <p>The .table-responsive-sm class creates a responsive table which will scroll horizontally on screens that are less than 576px wide.</p>                                                                                      
+  <p>Resize the browser window to see the effect.</p>
+  <div class="table-responsive-sm">          
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Sex</th>
+        <th>Example</th>
+        <th>Example</th>
+        <th>Example</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+        <td>Female</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+Bootstrap 4 Pagination
+----------------------
+
+If you have a web site with lots of pages, you may wish to add some sort of pagination to each page.
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pagination</h2>
+  <p>To create a basic pagination, add the .pagination class to an ul element. Then add the .page-item to each li element and a .page-link class to each link inside li:</p>                  
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Active State
+------------
+The .active class is used to "highlight" the current page:
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pagination - Active State</h2>
+  <p>Add class .active to let the user know which page he/she is on:</p>
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+Disabled State
+The .disabled class is used for un-clickable links:
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pagination - Disabled State</h2>
+  <p>Add class .disabled if a page for some reason is disabled:</p>
+  <ul class="pagination">
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Pagination Sizing
+Pagination blocks can also be sized to a larger or a smaller size:
+
+EX:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pagination - Sizing</h2>
+  <p>Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks.</p>
+
+  <p>Large:</p>
+  <ul class="pagination pagination-lg">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+
+  <p>Default:</p>
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+
+  <p>Small:</p>
+  <ul class="pagination pagination-sm">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+Pagination Alignment
+--------------------
+Use utility classes to change the alignment of the pagination:
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pagination</h2>
+  <p>Use utilitiy classes to change the alignment of the pagination:</p>                  
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+  </ul>
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+  </ul>
+  <ul class="pagination justify-content-end">
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+Breadcrumbs
+-----------
+Another form for pagination, is breadcrumbs:
+
+Ex:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Breadcrumbs</h2>
+  <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>                  
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Photos</a></li>
+    <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+    <li class="breadcrumb-item"><a href="#">Italy</a></li>
+    <li class="breadcrumb-item active">Rome</li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Bootstrap 4 Colors
+------------------
+Text Colors
+Bootstrap 4 has some contextual classes that can be used to provide "meaning through colors".
+
+The classes for text colors are: .text-muted, .text-primary, .text-success, .text-info, .text-warning, .text-danger, .text-secondary, .text-white, .text-dark, .text-body (default body color/often black) and .text-light:
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Contextual Colors</h2>
+  <p>Use the contextual classes to provide "meaning through colors":</p>
+  <p class="text-muted">This text is muted.</p>
+  <p class="text-primary">This text is important.</p>
+  <p class="text-success">This text indicates success.</p>
+  <p class="text-info">This text represents some information.</p>
+  <p class="text-warning">This text represents a warning.</p>
+  <p class="text-danger">This text represents danger.</p>
+  <p class="text-secondary">Secondary text.</p>
+  <p class="text-dark">This text is dark grey.</p>
+  <p class="text-body">Default body color (often black).</p>
+  <p class="text-light">This text is light grey (on white background).</p>
+  <p class="text-white">This text is white (on white background).</p>
+</div>
+
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------
+
+Bootstrap 4 Buttons
+-------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Button Styles</h2>
+  <button type="button" class="btn">Basic</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-link">Link</button>      
+</div>
+
+</body>
+</html>
+
+
+Bootstrap Button Size
+---------------------
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Button Sizes</h2>  
+  <button type="button" class="btn btn-primary btn-lg">Large</button>  
+  <button type="button" class="btn btn-primary btn-md">Medium</button>      
+  <button type="button" class="btn btn-primary btn-sm">Small</button>  
+  <button type="button" class="btn btn-primary btn-xs">XSmall</button>  
+</div>  
+  
+</body>  
+</html>  
+
+Bootstrap Enable/Disable Buttons
+--------------------------------
+You can set a button disable or unclickable state.
+
+The .active class is used to make a button appear pressed, and the class .disabled makes a button unclickable:
+
+Example:
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Button States</h2>  
+  <button type="button" class="btn btn-primary">Primary Button</button>  
+  <button type="button" class="btn btn-primary active">Active Primary</button>  
+  <button type="button" class="btn btn-primary disabled">Disabled Primary</button>  
+</div>  
+  
+</body>  
+</html>
+
+Bootstrap Block level buttons
+-----------------------------
+The block level button covers the entire width of the parent element.
+
+The .btn-block class is used to create a block level button:
+
+Example:
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Block Level Buttons</h2>  
+  <button type="button" class="btn btn-primary btn-block">Button 1</button>  
+  <button type="button" class="btn btn-default btn-block">Button 2</button>  
+  
+  <h2>Large Block Level Buttons</h2>  
+  <button type="button" class="btn btn-primary btn-lg btn-block">Button 1</button>  
+  <button type="button" class="btn btn-default btn-lg btn-block">Button 2</button>  
+  
+  <h2>Small Block Level Buttons</h2>  
+  <button type="button" class="btn btn-primary btn-sm btn-block">Button 1</button>  
+  <button type="button" class="btn btn-default btn-sm btn-block">Button 2</button>  
+</div>  
+  
+</body>  
+</html>   
+
+
+Button Classes with other elements
+----------------------------------
+You can use button classes with other tags i.e. <a>, <button>, or <input> element etc.
+
+Example:
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Button Classes with other Elements</h2>  
+  <a href="#" class="btn btn-info" role="button">Link Button</a>  
+  <button type="button" class="btn btn-info">Button</button>  
+  <input type="button" class="btn btn-info" value="Input Button">  
+  <input type="submit" class="btn btn-info" value="Submit Button">  
+</div>  
+  
+</body>  
+</html>
+
+Button Outline/ Bordered buttons
+--------------------------------
+Bootstrap 4 provides eight outline/bordered buttons:
+
+Ex:
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Button Outline/ Bordered Buttons</h2>  
+  <button type="button" class="btn btn-outline-primary">Primary</button>  
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>  
+  <button type="button" class="btn btn-outline-success">Success</button>  
+  <button type="button" class="btn btn-outline-info">Info</button>  
+  <button type="button" class="btn btn-outline-warning">Warning</button>  
+  <button type="button" class="btn btn-outline-danger">Danger</button>  
+  <button type="button" class="btn btn-outline-dark">Dark</button>  
+  <button type="button" class="btn btn-outline-light text-dark">Light</button>  
+</div>  
+  
+</body>  
+</html>
+
+
+
+
+Bootstrap Dropdowns
+-------------------
+Dropdown menus are toggleable, contextual menus, used for displaying links in a list format. It facilitates users to choose one value from a predefined list. This can be made interactive with the dropdown JavaScript plugin.
+
+You have to wrap dropdown menu within the class .dropdown to create Bootstrap Dropdown.
+
+Bootstrap Dropdown Example:
+
+ <!DOCTYPE html>  
+<html>  
+<head>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+    
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>The .dropdown class is used to indicate a dropdown menu.</p>  
+  <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>  
+  <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                            
+  <div class="dropdown">  
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li><a href="#">HTML</a></li>  
+      <li><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+    </ul>  
+  </div>  
+</div>  
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  
+</body>  
+</html>  
+
+Bootstrap Dropdown Divider
+--------------------------
+The class .divider is used to separate links inside the dropdown menu:
+
+
+example:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+   
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>The .divider class is used to separate links inside the dropdown menu:</p>  
+  <div class="dropdown">  
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li><a href="#">HTML</a></li>  
+      <li><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+      <li class="divider"></li>  
+      <li><a href="#">About Us</a></li>  
+    </ul>  
+  </div>  
+</div>  
+  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  
+</body>  
+</html>
+
+Bootstrap Dropdown Header
+------------------------
+The class .dropdown-header is used to add headers inside the dropdown menu.
+
+Example:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+   
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>The .dropdown-header class is used to add headers inside the dropdown menu:</p>  
+  <div class="dropdown">  
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li class="dropdown-header">Dropdown header 1</li>  
+      <li><a href="#">HTML</a></li>  
+      <li><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+      <li class="divider"></li>  
+      <li class="dropdown-header">Dropdown header 2</li>  
+      <li><a href="#">About Us</a></li>  
+    </ul>  
+  </div>  
+</div>  
+  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  
+</body>  
+</html>  
+
+Bootstrap Dropdown: Disable an item
+-----------------------------------
+Use the class .disabled to disable an item in the dropdown menu.
+
+Example:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+    
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Dropdowns</h2>  
+  <p>Here, CSS is disable.</p>  
+  <div class="dropdown">  
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials  
+    <span class="caret"></span></button>  
+    <ul class="dropdown-menu">  
+      <li><a href="#">HTML</a></li>  
+      <li class="disabled"><a href="#">CSS</a></li>  
+      <li><a href="#">JavaScript</a></li>  
+      <li class="divider"></li>  
+      <li><a href="#">About Us</a></li>  
+    </ul>  
+  </div>  
+</div>  
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  
+</body>  
+</html>  
+
+Bootstrap 4 Disable and Active Items
+------------------------------------
+To make an item active, highlight a specific dropdown item with the .active class (active item is appeared with a blue background color).
+
+To disable an item in the dropdown menu, you have to use the .disabled class (It makes a light-grey text color and a "no-parking-sign" icon on hover).
+
+Example:
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Dropdowns Active and Disable Example</h2>  
+  <div class="dropdown">  
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  
+      Dropdown button  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Normal</a>  
+      <a class="dropdown-item active" href="#">Active</a>  
+      <a class="dropdown-item disabled" href="#">Disabled</a>  
+    </div>  
+  </div>  
+</div>  
+  
+</body>  
+</html>  
+
+Bootstrap 4 Dropup
+------------------
+If you want the dropdown menu to expand upwards instead of downwards, change the element with class="dropdown" to "dropup"
+
+Example:
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+<br>  
+  
+<div class="container">  
+  <h2>Dropup Example</h2>  
+  <p>The .dropup class makes the dropdown menu expand upwards instead of downwards:</p>  
+  <div class="dropup">  
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">  
+      Dropup button  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Link 1</a>  
+      <a class="dropdown-item" href="#">Link 2</a>  
+    </div>  
+  </div>  
+</div>  
+  
+</body>  
+</html>  
+
+
+Split Button Dropdowns
+----------------------
+It is used to show dropdowns as split buttons. Here we use all contextual classes.
+
+Example:
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <title>Bootstrap Example</title>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>  
+</head>  
+<body>  
+  
+<div class="container">  
+  <h2>Dropdown Split Buttons Example</h2>  
+  <div class="btn-group">  
+    <button type="button" class="btn btn-primary">Primary</button>  
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">  
+      <span class="caret"></span>  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Link 1</a>  
+      <a class="dropdown-item" href="#">Link 2</a>  
+    </div>  
+  </div>  
+    
+  <div class="btn-group">  
+    <button type="button" class="btn btn-secondary">Secondary</button>  
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">  
+      <span class="caret"></span>  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Link 1</a>  
+      <a class="dropdown-item" href="#">Link 2</a>  
+    </div>  
+  </div>  
+  
+  <div class="btn-group">  
+    <button type="button" class="btn btn-success">Success</button>  
+    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">  
+      <span class="caret"></span>  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Link 1</a>  
+      <a class="dropdown-item" href="#">Link 2</a>  
+    </div>  
+  </div>  
+  
+  <div class="btn-group">  
+    <button type="button" class="btn btn-info">Info</button>  
+    <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">  
+      <span class="caret"></span>  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Link 1</a>  
+      <a class="dropdown-item" href="#">Link 2</a>  
+    </div>  
+  </div>  
+  
+  <div class="btn-group">  
+    <button type="button" class="btn btn-warning">Warning</button>  
+    <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">  
+      <span class="caret"></span>  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Link 1</a>  
+      <a class="dropdown-item" href="#">Link 2</a>  
+    </div>  
+  </div>  
+  
+  <div class="btn-group">  
+    <button type="button" class="btn btn-danger">Danger</button>  
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">  
+      <span class="caret"></span>  
+    </button>  
+    <div class="dropdown-menu">  
+      <a class="dropdown-item" href="#">Link 1</a>  
+      <a class="dropdown-item" href="#">Link 2</a>  
+    </div>  
+  </div>  
+</div>  
+  
+</body>  
+</html> 
+
+
+-----------------------------------------------------
+Bootstrap 4 Navs
+----------------
+Nav Menus
+
+If you want to create a simple horizontal menu, add the .nav class to a <ul> element, followed by .nav-item for each <li> and add the .nav-link class to their links:
+
+Example:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Nav</h2>
+  <p>Basic horizontal menu:</p>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+
+
+Aligned Nav
+-----------
+Add the .justify-content-center class to center the nav, and the .justify-content-end class to right-align the nav.    
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Nav</h2>
+  <p>Left-aligned nav (default):</p>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+  
+  <p class="text-center">Centered nav:</p>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+    
+  <p class="text-right">Right-aligned nav:</p>
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Vertical Nav
+------------
+
+Add the .flex-column class to create a vertical nav:
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Vertical Nav</h2>
+  <p>Use the .flex-column class to create a vertical nav:</p>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Tabs
+====
+Turn the nav menu into navigation tabs with the .nav-tabs class. Add the .active class to the active/current link.
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Navigation Tabs</h2>
+  <p>Turn the nav menu into navigation tabs with the .nav nav-tabs class. Add the active class to the active/current link. </p>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+Pills
+=====
+Turn the nav menu into navigation pills with the .nav-pills class.
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Navigation Pills</h2>
+  <p>Turn the nav menu into navigation pills with the .nav nav-pills class:</p>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------------------------
+Justified Tabs/pills
+--------------------
+Justify the tabs/pills with the .nav-justified class (equal width):
+
+
+Example
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Justified Tabs/Pills</h2>
+  <p>To justify tabs/pills (equal width), use the .nav-justified class:</p>
+  <ul class="nav nav-pills nav-justified">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul><br>
+
+  <p>Justified tabs:</p>
+  <ul class="nav nav-tabs nav-justified">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Pills with Dropdown
+===================
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pills with Dropdown</h2>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a></div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Tabs with Dropdown
+==================
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Tabs with Dropdown</h2>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a></div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+Toggleable / Dynamic Tabs
+=========================
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+
+<div class="container">
+  <h2>Toggleable Tabs</h2>
+  <br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+Toggleable / Dynamic Pills
+--------------------------
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+
+<div class="container">
+  <h2>Toggleable Pills</h2>
+  <br>
+  <!-- Nav pills -->
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu1">Menu 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu2">Menu 2</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <h3>HOME</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+Bootstrap 4  Form controls
+---------------------------------------------
+Form controls automatically receive some global styling with Bootstrap:
+
+All textual <input>, <textarea>, and <select> elements with class .form-control have a width of 100%.
+
+Bootstrap 4 Form Layouts
+Bootstrap provides two types of form layouts:
+
+1)Stacked (full-width) form
+
+2)Inline form
+
+Add a wrapper element with .form-group, around each form control, to ensure proper margins:
+
+Stacked form Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Stacked form</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
+Inline Form
+-----------
+In an inline form, all of the elements are inline and left-aligned.
+
+Note: This only applies to forms within viewports that are at least 576px wide.
+ On screens smaller than 576px, it will stack horizontally.
+
+Additional rule for an inline form:
+
+Add class .form-inline to the <form> element
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Inline form</h2>
+  <p>Make the viewport larger than 576px wide to see that all of the form elements are inline and left-aligned. On small screens, the form groups will stack horizontally.</p>
+  <form class="form-inline" action="/action_page.php">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
+
+Form Row/Grid
+-------------
+You can also use columns (.col) to control the width and alignment of form inputs without using spacing utilities.
+Just remember to put them inside a .row container.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Form Grid</h2>
+  <p>Create two form elements that appear side by side with .row and .col:</p>
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="col">
+        <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
+If you want less grid margins (override default column gutters), use .form-row instead of .row:
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Form Row/Grid</h2>
+  <p>In this example we will demonstrate the differences between .row and .form-row.</p>
+  <p>Create two form elements that appear side by side with .row and .col:</p>
+  <form>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="col">
+        <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+      </div>
+    </div>
+  </form>
+  <br>
+  
+  <p>Create two form elements that appear side by side with .form-row and .col:</p>
+  <form>
+    <div class="form-row">
+      <div class="col">
+        <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="col">
+        <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+Form Validation
+---------------
+
+You can use different validation classes to provide valuable feedback to users. Add either .was-validated or .needs-validation to the <form> element, depending on whether you want to provide validation feedback before or after submitting the form. The input fields will have a green (valid) or red (invalid) border to indicate what's missing in the form. You can also add a .valid-feedback or .invalid-feedback message to tell the user explicitly what's missing, or needs to be done before submitting the form.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Form Validation</h2>
+  <p>In this example, we use <code>.was-validated</code> to indicate what's missing before submitting the form:</p>
+  <form action="/action_page.php" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Username:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
+----------------------------------------------------------------------------------------
+Bootstrap 4 Flex
+-----------------
+Use flex classes to control the layout of Bootstrap 4 components.
+
+To create a flexbox container and to transform direct children into flex items, use the d-flex class:
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body> 
+
+<div class="container mt-3">
+  <h2>Flex</h2>
+  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+Horizontal Direction
+--------------------
+Use .flex-row to display the flex items horizontally (side by side). This is default.
+
+   Use .flex-row-reverse to right-align the horizontal direction:
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body> 
+
+<div class="container mt-3">
+  <h2>Horizontal Direction</h2>
+  <p>Use .flex-row to make the flex items appear side by side (default):</p>
+  <div class="d-flex flex-row bg-secondary mb-3">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  <p>Use .flex-row-reverse to right-align the direction:</p>
+  <div class="d-flex flex-row-reverse bg-secondary">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+Vertical Direction
+Use .flex-column to display the flex items vertically (on top of each other), or .flex-column-reverse to reverse the vertical direction:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body> 
+
+<div class="container mt-3">
+  <h2>Vertical Direction</h2>
+  <p>Use .flex-column to display the flex items vertically (on top of each other):</p>
+  <div class="d-flex flex-column mb-3">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+  <p>Use .flex-column-reverse to reverse the vertical direction:</p>
+  <div class="d-flex flex-column-reverse">
+    <div class="p-2 bg-info">Flex item 1</div>
+    <div class="p-2 bg-warning">Flex item 2</div>
+    <div class="p-2 bg-primary">Flex item 3</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+Bootstrap 4 Icons
+-----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<body>
+
+<div class="container">  
+  <h1>My Icons <i class="fas fa-heart"></i></h1>
+  <p>An icon along with some text: <i class="fas fa-thumbs-up"></i></p> 
+</div>
+  
+<div class="container">
+  <p>Others:</p>
+  <i class="fas fa-cloud"></i>
+  <i class="fas fa-coffee"></i>
+  <i class="fas fa-car"></i>
+  <i class="fas fa-file"></i>
+  <i class="fas fa-bars"></i>
+</div>
+
+</body>
+</html>
+
+
+Bootstrap 4 Cards
+-----------------
+
+Basic Card
+A basic card is created with the .card class, and content inside the card has a .card-body class:
+
+Example:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Card</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body> 
+ 
+<div class="container">
+  <h2>Basic Card</h2>
+  <div class="card">
+    <div class="card-body">Basic card</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+Header and Footer
+-----------------
+The .card-header class adds a heading to the card and the .card-footer class adds a footer to the card:
+
+Example
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+ 
+<div class="container">
+  <h2>Card Header and Footer</h2>
+  <div class="card">
+    <div class="card-header">Header</div>
+    <div class="card-body">Content</div> 
+    <div class="card-footer">Footer</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+Contextual Cards
+----------------
+To add a background color the card, use contextual classes (.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light.
+
+Example
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+ 
+<div class="container">
+  <h2>Cards with Contextual Classes</h2>
+  <div class="card">
+    <div class="card-body">Basic card</div>
+  </div>
+  <br>
+  <div class="card bg-primary text-white">
+    <div class="card-body">Primary card</div>
+  </div>
+  <br>
+  <div class="card bg-success text-white">
+    <div class="card-body">Success card</div>
+  </div>
+  <br>
+  <div class="card bg-info text-white">
+    <div class="card-body">Info card</div>
+  </div>
+  <br>
+  <div class="card bg-warning text-white">
+    <div class="card-body">Warning card</div>
+  </div>
+  <br>
+  <div class="card bg-danger text-white">
+    <div class="card-body">Danger card</div>
+  </div>
+  <br>
+  <div class="card bg-secondary text-white">
+    <div class="card-body">Secondary card</div>
+  </div>
+  <br>
+  <div class="card bg-dark text-white">
+    <div class="card-body">Dark card</div>
+  </div>
+  <br>
+  <div class="card bg-light text-dark">
+    <div class="card-body">Light card</div>
+  </div>
+</div>
+
+</body>
+</html>
+Bootstrap 4 Input Groups
+------------------------
+The .input-group class is a container to enhance an input by adding an icon, text or a button in front or behind the input field as a "help text".
+
+Use .input-group-prepend to add the help text in front of the input, and .input-group-append to add it behind the input.
+
+At last, add the .input-group-text class to style the specified help text.
+
+@
+
+Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h3>Input Groups</h3>
+  <p>The .input-group class is a container to enhance an input by adding an icon, text or a button in front (.input-group-prepend) or behind (.input-group-append) the input field as a "help text".</p>
+  <p>Use the .input-group-text class to style the specified help text.</p>
+  
+  <form action="/action_page.php">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">@</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Username" id="usr" name="username">
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Your Email" id="mail" name="email">
+      <div class="input-group-append">
+        <span class="input-group-text">@example.com</span>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
+
+
+from Praneeth K to Swami Ayyappa (privately):
+we have issues like executable block and raise RAMS request in oneit

@@ -1,0 +1,1478 @@
+HTML Tags
+---------
+HTML tags are like keywords which defines that how web browser will format and display the content. With the help of tags, a web browser can distinguish between an HTML content and a simple content. HTML tags contain three main parts: opening tag, content and closing tag. But some HTML tags are unclosed tags.
+
+When a web browser reads an HTML document, browser reads it from top to bottom and left to right. HTML tags are used to create HTML documents and render their properties. Each HTML tags have different properties.
+
+An HTML file must have some essential tags so that web browser can differentiate between a simple text and HTML text. You can use as many tags you want as per your code requirement.
+
+
+All HTML tags must enclosed within < > these brackets.
+Every tag in HTML perform different tasks.
+If you have used an open tag <tag>, then you must use a close tag </tag> (except some tags)
+
+Syntax:
+------
+<tag> content </tag>
+
+HTML Tag Examples
+-----------------
+Note: HTML Tags are always written in lowercase letters. The basic HTML tags are given below:
+<p> Paragraph Tag </p>
+
+<h2> Heading Tag </h2>
+<b> Bold Tag </b>
+
+<i> Italic Tag </i>
+
+<u> Underline Tag</u>
+
+
+ 
+Unclosed HTML Tags
+------------------
+Some HTML tags are not closed, for example br and hr.
+
+<br> Tag: br stands for break line, it breaks the line of the code.
+
+<hr> Tag: hr stands for Horizontal Rule. This tag is used to put a line across the webpage.
+
+HTML Meta Tags
+--------------
+DOCTYPE, title, link, meta and style
+
+HTML Text Tags
+--------------
+<p>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <strong>, <em>, <abbr>, <acronym>, <address>, <bdo>, <blockquote>, <cite>, <q>, <code>, <ins>, <del>, <dfn>, <kbd>, <pre>, <samp>, <var> and <br>
+
+HTML Link Tags
+--------------
+<a> and <base>
+
+HTML Image and Object Tags
+--------------------------
+<img>, <area>, <map>, <param> and <object>
+
+HTML List Tags
+--------------
+<ul>, <ol>, <li>, <dl>, <dt> and <dd>
+
+HTML Table Tags
+---------------
+table, tr, td, th, tbody, thead, tfoot, col, colgroup and caption
+
+HTML Form Tags
+--------------
+form, input, textarea, select, option, optgroup, button, label, fieldset and legend
+
+HTML Scripting Tags
+-------------------
+script and noscript
+
+
+HTML Attribute
+--------------
+
+HTML attributes are special words which provide additional information about the elements or attributes are the modifier of the HTML element.
+Each element or tag can have attributes, which defines the behaviour of that element.
+Attributes should always be applied with start tag.
+The Attribute should always be applied with its name and value pair.
+The Attributes name and values are case sensitive, and it is recommended by W3C that it should be written in Lowercase only.
+You can add multiple attributes in one HTML element, but need to give space between two attributes.
+
+Syntax:
+------
+<element attribute_name="value">content</element>  
+
+Example
+-------
+ <!DOCTYPE html>  
+<html>  
+<head>  
+</head>  
+<body>  
+    <h1> This is Style attribute</h1>  
+   <p style="height: 50px; color: blue">It will add style property in element</p>  
+    <p style="color: red">It will change the color of content</p>  
+</body>  
+</html>  
+
+HTML Attribute
+--------------
+Explanation of above example:
+
+<p style="height: 50px; color: blue">It will add style property in element</p>  
+
+In the above statement, we have used paragraph tags in which we have applied style attribute. This attribute is used for applying CSS property on any HTML element. It provides height to paragraph element of 50px and turns it colour to blue.
+
+
+<p style="color: red">It will change the color of content</p>  
+In the above statement we have again used style attribute in paragraph tag, which turns its colour red.
+
+The title attribute in HTML
+---------------------------
+Description: The title attribute is used as text tooltip in most of the browsers. It display its text when user move the cursor over a link or any text. You can use it with any text or link to show the description about that link or text. In our example, we are taking this with paragraph tag and heading tag.
+
+Example
+---------
+With <h1> tag:
+
+<h1 title="This is heading tag">Example of title attribute</h1>  
+
+With <p> tag:
+
+<p title="This is paragraph tag">Move the cursor over the heading and paragraph, and you will see a description as a tooltip</p>  
+
+
+<!DOCTYPE html>  
+<html>  
+  <head>  
+ </head>  
+<body>  
+      
+  <h1 title="This is heading tag">Example of title attribute</h1>  
+  <p title="This is paragraph tag">Move the cursor over the heading and paragraph, and you will see a description as a tooltip</p>  
+  
+</body>  
+</html>  
+
+
+The href attribute in HTML
+--------------------------
+Description: The href attribute is the main attribute of <a> anchor tag. This attribute gives the link address which is specified in that link. The href attribute provides the hyperlink, and if it is blank, then it will remain in same page.
+
+Example
+-------
+With link address:
+
+<a href="https://www.google.com/html-anchor">This is a link</a>  
+
+Without link address:
+---------------------
+<a href="">This is a link</a>  
+Test it Now HTML Attribute
+The src Attribute
+The src attribute is one of the important and required attribute of <img> element. It is source for the image which is required to display on browser. This attribute can contain image in same directory or another directory. The image name or source should be correct else browser will not display the image.
+
+Example
+-------
+<img src="whitepeacock.jpg" height="400" width="600">  
+Test it Now
+Note: The above example also have height and width attribute, which define the height and width of image on web page.
+
+HTML Attribute
+--------------
+Quotes: single quotes or double quotes?
+
+<a href="https://www.Google.com">A link to HTML.</a>  
+<a href='https://www.Google.com'>A link to HTML.</a>  
+
+IN HTML5, you can also omit use of quotes around attribute values.
+
+<a href=https://www.Google.com>A link to HTML.</a>  
+
+-------------------------------------------------------------------------------
+
+HTML Elements
+-------------
+An HTML file is made of elements. These elements are responsible for creating web pages and define content in that webpage. An element in HTML usually consist of a start tag <tag name>, close tag </tag name> and content inserted between them. Technically, an element is a collection of start tag, attributes, end tag, content between them.
+
+Note: Some elements does not have end tag and content, these elements are termed as empty elements or self-closing element or void elements.
+Such as:
+
+<p> Hello world!!! </p>   
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>WebPage........</title>  
+</head>  
+<body>  
+   <h1>This is my first web page</h1>  
+    <h2> How it looks?</h2>  
+     <p>It looks Nice!!!!!</p>  
+</body>  
+</html>  
+
+Test it Now HTML Elements
+-------------------------
+All the content written between body elements are visible on web page.
+Void element: All the elements in HTML do not require to have start tag and end tag, some elements does not have content and end tag such elements are known as Void elements or empty elements. These elements are also called as unpaired tag.
+
+
+Some Void elements are <br> (represents a line break) , <hr>(represents a horizontal line), etc.
+
+Nested HTML Elements: HTML can be nested, which means an element can contain --------------------
+another element.
+
+Block-level and Inline HTML elements
+------------------------------------
+For the default display and styling purpose in HTML, all the elements are divided into two categories:
+
+Block-level element
+Inline element
+
+
+
+Block-level element:
+--------------------
+These are the elements, which structure main part of web page, by dividing a page into coherent blocks.
+A block-level element always start with new line and takes the full width of web page, from left to right.
+These elements can contain block-level as well as inline elements.
+Following are the block-level elements in HTML.
+
+<address>, <article>, <aside>, <blockquote>, <canvas>, <dd>, <div>, <dl>, <dt>, <fieldset>, <figcaption>, <figure>, <footer>, <form>, <h1>-<h6>, <header>, <hr>, <li>, <main>, <nav>, <noscript>, <ol>, <output>, <p>, <pre>, <section>, <table>, <tfoot>, <ul> and <video>.
+
+Example:
+<!DOCTYPE html>  
+<html>  
+             <head>  
+    </head>  
+<body>  
+    <div style="background-color: lightblue">This is first div</div>  
+    <div style="background-color: lightgreen">This is second div</div>  
+    <p style="background-color: pink">This is a block level element</p>  
+</body>  
+</html>  
+
+Block-level and Inline HTML elements
+------------------------------------
+In the above example we have used tag, which defines a section in a web page, and takes full width of page.
+We have used style attribute which is used to styling the HTML content, and the background color are showing that it's a block level element.
+
+Inline elements:
+---------------
+Inline elements are those elements, which differentiate the part of a given text and provide it a particular function.
+These elements does not start with new line and take width as per requirement.
+The Inline elements are mostly used with other elements.
+<a>, <abbr>, <acronym>, <b>, <bdo>, <big>, <br>, <button>, <cite>, <code>, <dfn>, <em>, <i>, <img>, <input>, <kbd>, <label>, <map>, <object>, <q>, <samp>, <script>, <select>, <small>, <span>, <strong>, <sub>, <sup>, <textarea>, <time>, <tt>, <var>.
+
+Example:
+
+<!DOCTYPE html>  
+<html>  
+    <head>  
+    </head>  
+<body>  
+    <a href="https://www.google.com">Click on link</a>  
+    <span style="background-color: lightblue">this is inline element</span>  
+    <p>This will take width of text only</p>  
+ </body>  
+</html>   
+
+Block-level and Inline HTML elements
+------------------------------------
+Following is the list of the some main elements used in HTML:
+
+Start tag			Content	End tag	Description
+
+<h1> ...... <h6>		These are headings of HTML	</h1>??..</h6>	These 		elements are used to 				provide the headings of page.
+<p>This is the paragraph</p>	This element is used to display a content in form of paragraph.
+<div>This is div section</div>	This element is used to provide a section in web page.
+<br>				This element is used to provide a line break. ( void element)
+<hr>				This element is used to provide a horizontal line. (void element)
+
+
+------------------------------------------------------------------------------------------------------------
+
+HTML Formatting
+---------------
+HTML Formatting is a process of formatting text for better look and feel. HTML provides us ability to format text without using CSS. There are many formatting tags in HTML. These tags are used to make text bold, italicized, or underlined. There are almost 14 options available that how text appears in HTML and XHTML.
+
+In HTML the formatting tags are divided into two categories:
+
+Physical tag: These tags are used to provide the visual appearance to the text.
+Logical tag: These tags are used to add some logical or semantic value to the text.
+NOTE: There are some physical and logical tags which may give same visual appearance, but they will be different in semantics.
+Here, we are going to learn 14 HTML formatting tags. Following is the list of HTML formatting text.
+
+
+Element name	Description
+
+<b>		This is a physical tag, which is used to bold the text written between it.
+<strong>	This is a logical tag, which tells the browser that the text is important.
+<i>		This is a physical tag which is used to make text italic.
+<em>		This is a logical tag which is used to display content in italic.
+<mark>		This tag is used to highlight text.
+<u>	This tag is used to underline text written between it.
+<tt>	This tag is used to appear a text in teletype. (not supported in HTML5)
+<strike>	This tag is used to draw a strikethrough on a section of text. (Not supported in HTML5)
+<sup>	It displays the content slightly above the normal line.
+<sub>	It displays the content slightly below the normal line.
+<del>	This tag is used to display the deleted content.
+<ins>	This tag displays the content which is added
+<big>	This tag is used to increase the font size by one conventional unit.
+<small>	This tag is used to decrease the font size by one unit from base font size.
+
+1) Bold Text
+HTML<b> and <strong> formatting elements
+
+The HTML <b> element is a physical tag which display text in bold font, without any logical importance. If you write anything within <b>............</b> element, is shown in bold letters.
+
+example:
+
+<p> <b>Write Your First Paragraph in bold text.</b></p>     
+
+
+The HTML <strong> tag is a logical tag, which displays the content in bold font and informs the browser about its logical importance. If you write anything between <strong>???????. </strong>, is shown important text.
+
+example:
+-------
+<p><strong>This is an important content</strong>, and this is normal content</p>  
+
+
+Example
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>formatting elements</title>  
+</head>  
+<body>  
+<h1>Explanation of formatting element</h1>  
+<p><strong>This is an important content</strong>, and this is normal content</p>  
+</body>  
+</html>  
+
+2) Italic Text
+
+HTML <i> and <em> formatting elements
+
+The HTML <i> element is physical element, which display the enclosed content in italic font, without any added importance. If you write anything within <i>............</i> element, is shown in italic letters.
+
+example:
+-------
+<p> <i>Write Your First Paragraph in italic text.</i></p>  
+
+
+The HTML <em> tag is a logical element, which will display the enclosed content in italic font, with added semantics importance.
+
+example:
+--------
+<p><em>This is an important content</em>, which displayed in italic font.</p>  
+
+Ex:
+--
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>formatting elements</title>  
+</head>  
+<body>  
+<h1>Explanation of italic formatting element</h1>  
+<p><em>This is an important content</em>, which displayed in italic font.</p>  
+</body>  
+</html>  
+
+ 
+3) HTML Marked formatting
+   ----------------------
+If you want to mark or highlight a text, you should write the content within <mark>.........</mark>.
+
+example:
+-------
+<h2>  I want to put a <mark> Mark</mark> on your face</h2>   
+
+4) Underlined Text
+If you write anything within <u>.........</u> element, is shown in underlined text.
+
+example:
+-------
+
+<p> <u>Write Your First Paragraph in underlined text.</u></p>  
+
+5) Strike Text
+Anything written within <strike>.......................</strike> element is displayed with strikethrough. It is a thin line which cross the statement.
+
+example:
+-------
+<p> <strike>Write Your First Paragraph with strikethrough</strike>.</p>  
+
+6) Monospaced Font
+If you want that each letter has the same width then you should write the content within <tt>.............</tt> element.
+
+Note: We know that most of the fonts are known as variable-width fonts because different letters have different width. (for example: 'w' is wider than 'i'). 
+Monospaced Font provides similar space among every letter.
+
+example:
+-------
+<p>Hello <tt>Write Your First Paragraph in monospaced font.</tt></p>     
+
+7) Superscript Text
+If you put the content within <sup>..............</sup> element, is shown in superscript; means it is displayed half a character's height above the other characters.
+
+example:
+-------
+<p>Hello <sup>Write Your First Paragraph in superscript.</sup></p>     
+8) Subscript Text
+If you put the content within <sub>..............</sub> element, is shown in subscript ; means it is displayed half a character's height below the other characters.
+
+example:
+--------
+<p>Hello <sub>Write Your First Paragraph in subscript.</sub></p>  
+
+9) Deleted Text
+Anything that puts within <del>..........</del> is displayed as deleted text.
+
+example:
+-------
+<p>Hello <del>Delete your first paragraph.</del></p>  
+
+10) Inserted Text
+Anything that puts within <ins>..........</ins> is displayed as inserted text.
+
+example:
+-------
+<p> <del>Delete your first paragraph.</del><ins>Write another paragraph.</ins></p>  
+
+11) Larger Text
+If you want to put your font size larger than the rest of the text then put the content within <big>.........</big>. It increase one font size larger than the previous one.
+
+example:
+-------
+<p>Hello <big>Write the paragraph in larger font.</big></p>  
+
+12) Smaller Text
+If you want to put your font size smaller than the rest of the text then put the content within <small>.........</small>tag. It reduces one font size than the previous one.
+
+example:
+-------
+<p>Hello <small>Write the paragraph in smaller font.</small></p> 
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+HTML Heading
+------------
+A HTML heading or HTML h tag can be defined as a title or a subtitle which you want to display on the webpage. When you place the text within the heading tags <h1>.........</h1>, it is displayed on the browser in the bold format and size of the text depends on the number of heading.
+
+There are six different HTML headings which are defined with the <h1> to <h6> tags, from highest level h1 (main heading) to the least level h6 (least important heading).
+
+h1 is the largest heading tag and h6 is the smallest one. So h1 is used for most important heading and h6 is used for least important.
+
+
+Headings in HTML helps the search engine to understand and index the structure of web page.
+
+Note: The main keyword of the whole content of a webpage should be display by h1 heading tag.
+example:
+-------
+<h1>Heading no. 1</h1>  
+<h2>Heading no. 2</h2>  
+<h3>Heading no. 3</h3>  
+<h4>Heading no. 4</h4>  
+<h5>Heading no. 5</h5>  
+<h6>Heading no. 6</h6>  
+
+Heading elements (h1....h6) should be used for headings only. They should not be used just to make text bold or big.
+HTML headings can also be used with nested elements. Following are different codes to display the way to use heading elements.
+Example:
+-------
+<!DOCTYPE html>  
+<html>  
+ <head>  
+    <title>Heading elements</title>  
+ </head>  
+ <body>  
+     <h1>This is main heading of page. </h1>  
+      <p>h1 is the most important heading, which is used to display the keyword of page </p>  
+     <h2>This is first sub-heading</h2>  
+      <p>h2 describes the first sub heading of page. </p>  
+     <h3>This is Second sub-heading</h3>  
+      <p>h3 describes the second sub heading of page.</p>  
+      <p>We can use h1 to h6 tag to use the different sub-heading with their paragraphs if         
+                     required.   
+                </p>  
+   </body>  
+</html
+
+-------------------------------------------------------------------------------------------------------
+
+
+HTML Anchor
+-----------
+The HTML anchor tag defines a hyperlink that links one page to another page. It can create hyperlink to other web page as well as files, location, or any URL. The "href" attribute is the most important attribute of the HTML a tag. and which links to destination page or URL.
+
+href attribute of HTML anchor tag
+The href attribute is used to define the address of the file to be linked. In other words, it points out the destination page.
+
+The syntax of HTML anchor tag is given below.
+
+
+<a href = "..........."> Link Text </a>
+
+Ex:
+--
+<a href="second.html">Click for Second Page</a>  
+
+If we want to open that link to another page then we can use target attribute of <a> tag. With the help of this link will be open in next page.
+
+Example:
+-------
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title></title>  
+</head>  
+<body>  
+<p>Click on <a href="https://www.google.com/" target="_blank"> this-link </a>to go on home page of Google</p>  
+</body>  
+</html>  
+
+HTML Anchor
+Note:
+
+The target attribute can only use with href attribute in anchor tag.
+If we will not use target attribute then link will open in same page.
+Appearance of HTML anchor tag:
+-----------------------------
+An unvisited link is displayed underlined and blue.
+
+A visited link displayed underlined and purple.
+
+An active link is underlined and red.
+
+
+HTML Image
+----------
+HTML img tag is used to display image on the web page. HTML img tag is an empty tag that contains attributes only, closing tags are not used in HTML image element.
+
+example
+-------
+
+<h2>HTML Image Example</h2>  
+<img src="image1.gif" alt="Good Morning Friends"/>  
+
+Attributes of HTML img tag
+--------------------------
+The src and alt are important attributes of HTML img tag. All attributes of HTML image tag are given below.
+
+1) src
+It is a necessary attribute that describes the source or path of the image. It instructs the browser where to look for the image on the server.
+
+The location of image may be on the same directory or another server.
+
+2) alt
+The alt attribute defines an alternate text for the image, if it can't be displayed. The value of the alt attribute describe the image in words. The alt attribute is considered good for SEO prospective.
+
+3) width
+
+It is an optional attribute which is used to specify the width to display the image. It is not recommended now. You should apply CSS in place of width attribute.
+
+4) height
+It h3 the height of the image. The HTML height attribute also supports iframe, image and object elements. It is not recommended now. You should apply CSS in place of height attribute.
+
+
+HTML Lists
+----------
+HTML Lists are used to specify lists of information. All lists may contain one or more list elements. 
+There are three different types of HTML lists:
+
+Ordered List or Numbered List (ol)
+Unordered List or Bulleted List (ul)
+Description List or Definition List (dl)
+
+Note: We can create a list inside another list, which will be termed as nested List.
+HTML Ordered List or Numbered List
+----------------------------------
+In the ordered HTML lists, all the list items are marked with numbers by default. It is known as numbered list also. The ordered list starts with <ol> tag and the list items start with <li> tag.
+
+Ex:
+--
+<ol>  
+ <li>Aries</li>  
+ <li>Bingo</li>  
+ <li>Leo</li>  
+ <li>Oracle</li>  
+</ol>  
+
+
+ 
+HTML Unordered List or Bulleted List
+------------------------------------
+In HTML Unordered list, all the list items are marked with bullets. It is also known as bulleted list also. The Unordered list starts with <ul> tag and list items start with the <li> tag.
+
+<ul>  
+ <li>Aries</li>  
+ <li>Bingo</li>  
+ <li>Leo</li>  
+ <li>Oracle</li>  
+</ul>  
+
+HTML Description List or Definition List
+----------------------------------------
+HTML Description list is also a list style which is supported by HTML and XHTML.
+It is also known as definition list where entries are listed like a dictionary or encyclopedia.
+
+The definition list is very appropriate when you want to present glossary, list of terms or other name-value list.
+
+The HTML definition list contains following three tags:
+
+<dl> tag defines the start of the list.
+<dt> tag defines a term.
+<dd> tag defines the term definition (description).
+
+Ex:
+--
+<dl>  
+  <dt>Aries</dt>  
+  <dd>-One of the 12 horoscope sign.</dd>  
+  <dt>Bingo</dt>  
+  <dd>-One of my evening snacks</dd>  
+ <dt>Leo</dt>  
+ <dd>-It is also an one of the 12 horoscope sign.</dd>  
+  <dt>Oracle</dt>  
+  <dd>-It is a multinational technology corporation.</dd>   
+</dl>  
+
+HTML Nested List
+----------------
+A list within another list is termed as nested list. If you want a bullet list inside a numbered list then such type of list will called as nested list.
+
+Ex:
+--
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Nested list</title>  
+</head>  
+<body>  
+    <p>List of Indian States with thier capital</p>  
+<ol>  
+    <li>Delhi  
+        <ul>  
+            <li>NewDelhi</li>  
+        </ul>  
+    </li>  
+    <li>Haryana  
+        <ul>  
+            <li>Chandigarh</li>  
+        </ul>  
+    </li>  
+    <li>Gujarat  
+        <ul>  
+            <li>Gandhinagar</li>  
+        </ul>  
+    </li>  
+    <li>Rajasthan   
+        <ul>  
+            <li>Jaipur</li>  
+        </ul>  
+    </li>  
+    <li>Maharashtra  
+        <ul>  
+            <li>Mumbai</li>  
+        </ul>  
+    </li>  
+    <li>Uttarpradesh  
+        <ul>  
+            <li>Lucknow</li></ul>  
+    </li>  
+</ol>  
+</body>  
+</html>  
+
+
+--------------------------------------------------------------------------------------------------------------
+
+HTML Table
+----------
+HTML table tag is used to display data in tabular form (row * column). There can be many columns in a row.
+
+We can create a table to display data in tabular form, using <table> element, with the help of <tr> , <td>, and <th> elements.
+
+In Each table, table row is defined by <tr> tag, table header is defined by <th>, and table data is defined by <td> tags.
+
+
+HTML tables are used to manage the layout of the page e.g. header section, navigation bar, body content, footer section etc. But it is recommended to use div tag over table to manage the layout of the page .
+
+HTML Table Tags
+---------------
+Tag	Description
+
+<table>	It defines a table.
+<tr>	It defines a row in a table.
+<th>	It defines a header cell in a table.
+<td>	It defines a cell in a table.
+<caption>	It defines the table caption.
+<colgroup>	It specifies a group of one or more columns in a table for formatting.
+<col>	It is used with <colgroup> element to specify column properties for each column.
+<tbody>	It is used to group the body content in a table.
+<thead>	It is used to group the header content in a table.
+<tfooter>	It is used to group the footer content in a table.
+
+Table Example
+-------------
+<table>  
+<tr><th>First_Name</th><th>Last_Name</th><th>Marks</th></tr>  
+<tr><td>Sonoo</td><td>Jaiswal</td><td>60</td></tr>  
+<tr><td>James</td><td>William</td><td>80</td></tr>  
+<tr><td>Swati</td><td>Sironi</td><td>82</td></tr>  
+<tr><td>Chetna</td><td>Singh</td><td>72</td></tr>  
+</table> 
+
+-------------------------------------------------------------------------------------------------------
+HTML Form
+---------
+An HTML form is a section of a document which contains controls such as text fields, password fields, checkboxes, radio buttons, submit button, menus etc.
+
+An HTML form facilitates the user to enter data that is to be sent to the server for processing such as name, email address, password, phone number, etc. .
+
+Why use HTML Form
+-----------------
+HTML forms are required if you want to collect some data from of the site visitor.
+
+
+For example: If a user want to purchase some items on internet, he/she must fill the form such as shipping address and credit/debit card details so that item can be sent to the given address.
+
+HTML Form Syntax
+----------------
+<form action="server url" method="get|post">  
+  //input controls e.g. textfield, textarea, radiobutton, button  
+</form>  
+
+HTML Form Tags
+--------------
+
+Tag		Description
+<form>	It defines an HTML form to enter inputs by the used side.
+<input>	It defines an input control.
+<textarea>	It defines a multi-line input control.
+<label>	It defines a label for an input element.
+<fieldset>	It groups the related element in a form.
+<legend>	It defines a caption for a <fieldset> element.
+<select>	It defines a drop-down list.
+<optgroup>	It defines a group of related options in a drop-down list.
+<option>	It defines an option in a drop-down list.
+<button>	It defines a clickable button.
+
+ 
+HTML 5 Form Tags
+----------------
+Let's see the list of HTML 5 form tags.
+
+Tag		Description
+<datalist>	It specifies a list of pre-defined options for input control.
+<keygen>	It defines a key-pair generator field for forms.
+<output>	It defines the result of a calculation.
+
+HTML <form> element
+-------------------
+The HTML <form> element provide a document section to take input from user. It provides various interactive controls for submitting information to web server such as text field, text area, password field, etc.
+
+Note: The <form> element does not itself create a form but it is container to contain all required form elements, such as <input>, <label>, etc.
+Syntax:
+
+<form>  
+//Form elements  
+</form>  
+
+HTML <input> element
+--------------------
+The HTML <input> element is fundamental form element. It is used to create form fields, to take input from user. We can apply different input filed to gather different information form user. 
+
+Example:
+-------
+<body>  
+  <form>  
+     Enter your name  <br>  
+    <input type="text" name="username">  
+  </form>  
+</body>  
+
+HTML TextField Control
+----------------------
+The type="text" attribute of input tag creates textfield control also known as single line textfield control. The name attribute is optional, but it is required for the server side component such as JSP, ASP, PHP etc.
+
+<form>  
+    First Name: <input type="text" name="firstname"/> <br/>  
+    Last Name:  <input type="text" name="lastname"/> <br/>  
+ </form>  
+
+HTML TextField Control
+----------------------
+Note: If you will omit 'name' attribute then the text filed input will not be submitted to server.
+
+HTML <textarea> tag in form
+---------------------------
+The <textarea> tag in HTML is used to insert multiple-line text in a form. The size of <textarea> can be specify either using "rows" or "cols" attribute or by CSS.
+
+Example:
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Form in HTML</title>  
+</head>  
+<body>  
+  <form>  
+        Enter your address:<br>  
+      <textarea rows="2" cols="20"></textarea>  
+  </form>  
+</body>  
+</html>  
+
+Label Tag in Form
+-----------------
+It is considered better to have label in form. As it makes the code parser/browser/user friendly.
+
+If you click on the label tag, it will focus on the text control. To do so, you need to have for attribute in label tag that must be same as id attribute of input tag.
+
+NOTE: It is good to use <label> tag with form, although it is optional but if you will use it, then it will provide a focus when you tap or click on label tag. It is more worthy with touchscreens.
+<form>  
+    <label for="firstname">First Name: </label> <br/>  
+              <input type="text" id="firstname" name="firstname"/> <br/>  
+   <label for="lastname">Last Name: </label>  
+              <input type="text" id="lastname" name="lastname"/> <br/>  
+ </form>  
+
+HTML Password Field Control
+---------------------------
+The password is not visible to the user in password field control.
+
+<form>  
+    <label for="password">Password: </label>  
+              <input type="password" id="password" name="password"/> <br/>  
+</form>  
+
+HTML 5 Email Field Control
+--------------------------
+The email field in new in HTML 5. It validates the text for correct email address. 
+You must use @ and . in this field.
+
+<form>  
+    <label for="email">Email: </label>  
+              <input type="email" id="email" name="email"/> <br/>  
+</form>  
+
+Radio Button Control
+--------------------
+The radio button is used to select one option from multiple options. 
+It is used for selection of gender, quiz questions etc.
+
+If you use one name for all the radio buttons, only one radio button can be selected at a time.
+
+Using radio buttons for multiple options, you can only choose a single option at a time.
+Ex:
+---
+<form>  
+    <label for="gender">Gender: </label>  
+              <input type="radio" id="gender" name="gender" value="male"/>Male  
+              <input type="radio" id="gender" name="gender" value="female"/>Female <br/>  
+</form>  
+
+Checkbox Control
+----------------
+The checkbox control is used to check multiple options from given checkboxes.
+
+<form>  
+Hobby:<br>  
+              <input type="checkbox" id="cricket" name="cricket" value="cricket"/>  
+                 <label for="cricket">Cricket</label> <br>  
+              <input type="checkbox" id="football" name="football" value="football"/>  
+                 <label for="football">Football</label> <br>  
+              <input type="checkbox" id="hockey" name="hockey" value="hockey"/>  
+                 <label for="hockey">Hockey</label>  
+</form>  
+Note: These are similar to radio button except it can choose multiple options at a time and radio button can select one button at a time, and its display.
+
+Submit button control
+---------------------
+HTML <input type="submit"> are used to add a submit button on web page. When user clicks on submit button, then form get submit to the server.
+
+Syntax:
+
+<input type="submit" value="submit">  
+The type = submit , specifying that it is a submit button
+
+The value attribute can be anything which we write on button on web page.
+
+The name attribute can be omit here.
+
+Example:
+
+<form>  
+    <label for="name">Enter name</label><br>  
+    <input type="text" id="name" name="name"><br>  
+    <label for="pass">Enter Password</label><br>  
+    <input type="Password" id="pass" name="pass"><br>  
+    <input type="submit" value="submit">  
+</form>  
+
+HTML <fieldset> element:
+------------------------
+The <fieldset> element in HTML is used to group the related information of a form. This element is used with <legend> element which provide caption for the grouped elements.
+
+Example:
+
+ <form>  
+     <fieldset>  
+      <legend>User Information:</legend>  
+    <label for="name">Enter name</label><br>  
+<input type="text" id="name" name="name"><br>  
+<label for="pass">Enter Password</label><br>  
+<input type="Password" id="pass" name="pass"><br>  
+<input type="submit" value="submit">  
+</fieldset>  
+</form>  
+
+HTML Form Example
+-----------------
+Following is the example for a simple form of registration.
+
+<!DOCTYPE html>  
+ <html>  
+ <head>  
+  <title>Form in HTML</title>  
+</head>  
+ <body>  
+     <h2>Registration form</h2>  
+    <form>  
+     <fieldset>  
+        <legend>User personal information</legend>  
+        <label>Enter your full name</label><br>  
+        <input type="text" name="name"><br>  
+         <label>Enter your email</label><br>  
+         <input type="email" name="email"><br>  
+         <label>Enter your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <label>confirm your password</label><br>  
+         <input type="password" name="pass"><br>  
+         <br><label>Enter your gender</label><br>  
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/>    
+         <input type="radio" id="gender" name="gender" value="others"/>others <br/>   
+          <br>Enter your Address:<br>  
+         <textarea></textarea><br>  
+
+<label>	Country</label>
+	<select name='country'>
+		<option value=India>India</option>
+		<option value=China>China</option>
+		<option value=USA>USA</option>
+		<option value=UK>UK</option>
+	</select>
+
+
+
+         <input type="submit" value="sign-up">  
+     </fieldset>  
+  </form>  
+ </body>  
+</html>  
+
+
+HTML Form Example
+-----------------
+Let's see a simple example of creating HTML form.
+
+<form action="#">  
+<table>  
+<tr>  
+    <td class="tdLabel"><label for="register_name" class="label">Enter name:</label></td>  
+    <td><input type="text" name="name" value="" id="register_name" style="width:160px"/></td>  
+</tr>  
+<tr>  
+    <td class="tdLabel"><label for="register_password" class="label">Enter password:</label></td>  
+    <td><input type="password" name="password" id="register_password" style="width:160px"/></td>  
+</tr>  
+<tr>  
+    <td class="tdLabel"><label for="register_email" class="label">Enter Email:</label></td>  
+    <td  
+><input type="email" name="email" value="" id="register_email" style="width:160px"/></td>  
+</tr>  
+<tr>  
+    <td class="tdLabel"><label for="register_gender" class="label">Enter Gender:</label></td>  
+    <td>  
+<input type="radio" name="gender" id="register_gendermale" value="male"/>  
+<label for="register_gendermale">male</label>  
+<input type="radio" name="gender" id="register_genderfemale" value="female"/>  
+<label for="register_genderfemale">female</label>  
+    </td>  
+</tr>  
+<tr>  
+    <td class="tdLabel"><label for="register_country" class="label">Select Country:</label></td>  
+    <td><select name="country" id="register_country" style="width:160px">  
+    <option value="india">india</option>  
+    <option value="pakistan">pakistan</option>  
+    <option value="africa">africa</option>  
+    <option value="china">china</option>  
+    <option value="other">other</option>  
+</select>  
+</td>  
+</tr>  
+<tr>  
+    <td colspan="2"><div align="right"><input type="submit" id="register_0" value="register"/>  
+</div></td>  
+</tr>  
+</table>  
+</form>
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+	XHTML
+	-----
+
+XHTML stands for EXtensible HyperText Markup Language. It is the next step in the evolution of the internet. The XHTML 1.0 is the first document type in the XHTML family.
+
+XHTML is almost identical to HTML 4.01 with only few differences. This is a cleaner and stricter version of HTML 4.01. If you already know HTML, then you need to give little attention to learn this latest version of HTML.
+
+XHTML was developed by World Wide Web Consortium (W3C) to help web developers make the transition from HTML to XML. By migrating to XHTML today, web developers can enter the XML world with all of its benefits, while still remaining confident in the backward and future compatibility of the content.
+
+Why Use XHTML?
+Developers who migrate their content to XHTML 1.0 get the following benefits −
+
+XHTML documents are XML conforming as they are readily viewed, edited, and validated with standard XML tools.
+
+XHTML documents can be written to operate better than they did before in existing browsers as well as in new browsers.
+
+XHTML documents can utilize applications such as scripts and applets that rely upon either the HTML Document Object Model or the XML Document Object Model.
+
+XHTML gives you a more consistent, well-structured format so that your webpages can be easily parsed and processed by present and future web browsers.
+
+You can easily maintain, edit, convert and format your document in the long run.
+
+Since XHTML is an official standard of the W3C, your website becomes more compatible with many browsers and it is rendered more accurately.
+
+XHTML combines strength of HTML and XML. Also, XHTML pages can be rendered by all XML enabled browsers.
+
+XHTML defines quality standard for your webpages and if you follow that, then your web pages are counted as quality web pages. The W3C certifies those pages with their quality stamp.
+
+Web developers and web browser designers are constantly discovering new ways to express their ideas through new markup languages. In XML, it is relatively easy to introduce new elements or additional element attributes. The XHTML family is designed to accommodate these extensions through XHTML modules and techniques for developing new XHTML-conforming modules. These modules permit the combination of existing and new features at the time of developing content and designing new user agents.
+
+Basic Understanding
+Before we proceed further, let us have a quick view on what are HTML, XML, and SGML.
+
+What is SGML?
+This is Standard Generalized Markup Language (SGML) application conforming to International Standard ISO 8879. HTML is widely regarded as the standard publishing language of the World Wide Web.
+
+This is a language for describing markup languages, particularly those used in electronic document exchange, document management, and document publishing. HTML is an example of a language defined in SGML.
+
+What is XML?
+XML stands for EXtensible Markup Language. XML is a markup language much like HTML and it was designed to describe data. XML tags are not predefined. You must define your own tags according to your needs.
+
+
+XHTML Syntax
+------------
+
+
+XHTML syntax is very similar to HTML syntax and almost all the valid HTML elements are valid in XHTML as well. But when you write an XHTML document, you need to pay a bit extra attention to make your HTML document compliant to XHTML.
+
+Here are the important points to remember while writing a new XHTML document or converting existing HTML document into XHTML document −
+
+Write a DOCTYPE declaration at the start of the XHTML document.
+
+Write all XHTML tags and attributes in lower case only.
+
+Close all XHTML tags properly.
+
+Nest all the tags properly.
+
+Quote all the attribute values.
+
+Forbid Attribute minimization.
+
+Replace the name attribute with the id attribute.
+
+Deprecate the language attribute of the script tag.
+
+Here is the detail explanation of the above XHTML rules −
+
+DOCTYPE Declaration
+All XHTML documents must have a DOCTYPE declaration at the start. There are three types of DOCTYPE declarations, which are discussed in detail in XHTML Doctypes chapter. Here is an example of using DOCTYPE −
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+Case Sensitivity
+XHTML is case sensitive markup language. All the XHTML tags and attributes need to be written in lower case only.
+
+<!-- This is invalid in XHTML -->
+<A Href="/xhtml/xhtml_tutorial.html">XHTML Tutorial</A>
+
+<!-- Correct XHTML way of writing this is as follows -->
+<a href="/xhtml/xhtml_tutorial.html">XHTML Tutorial</a>
+In the example, Href and anchor tag A are not in lower case, so it is incorrect.
+
+Closing the Tags
+----------------
+Each and every XHTML tag should have an equivalent closing tag, even empty elements should also have closing tags. Here is an example showing valid and invalid ways of using tags −
+
+<!-- This is invalid in XHTML -->
+<p>This paragraph is not written according to XHTML syntax.
+
+<!-- This is also invalid in XHTML -->
+<img src="/images/xhtml.gif" >
+The following syntax shows the correct way of writing above tags in XHTML. Difference is that, here we have closed both the tags properly.
+
+<!-- This is valid in XHTML -->
+<p>This paragraph is not written according to XHTML syntax.</p>
+
+<!-- This is also valid now -->
+<img src="/images/xhtml.gif" />
+
+Attribute Quotes
+----------------
+All the values of XHTML attributes must be quoted. Otherwise, your XHTML document is assumed as an invalid document. Here is the example showing syntax −
+
+<!-- This is invalid in XHTML -->
+<img src="/images/xhtml.gif" width=250 height=50 />
+
+<!-- Correct XHTML way of writing this is as follows -->
+<img src="/images/xhtml.gif" width="250" height="50" />
+
+Attribute Minimization
+----------------------
+XHTML does not allow attribute minimization. It means you need to explicitly state the attribute and its value. The following example shows the difference −
+
+<!-- This is invalid in XHTML -->
+<option selected>
+
+<!-- Correct XHTML way of writing this is as follows -->
+<option selected="selected">
+Here is a list of the minimized attributes in HTML and the way you need to write them in XHTML −
+
+HTML Style	XHTML Style
+----------      -----------
+compact	compact="compact"
+checked	checked="checked"
+declare	declare="declare"
+readonly	readonly="readonly"
+disabled	disabled="disabled"
+selected	selected="selected"
+defer	defer="defer"
+ismap	ismap="ismap"
+nohref	nohref="nohref"
+noshade	noshade="noshade"
+nowrap	nowrap="nowrap"
+multiple	multiple="multiple"
+noresize	noresize="noresize"
+
+The id Attribute
+----------------
+The id attribute replaces the name attribute. Instead of using name = "name", XHTML prefers to use id = "id". The following example shows how −
+
+<!-- This is invalid in XHTML -->
+<img src="/images/xhtml.gif" name="xhtml_logo" />
+
+<!-- Correct XHTML way of writing this is as follows -->
+<img src="/images/xhtml.gif" id="xhtml_logo" />
+
+The language Attribute
+----------------------
+The language attribute of the script tag is deprecated. The following example shows this difference −
+
+<!-- This is invalid in XHTML -->
+
+<script language="JavaScript" type="text/JavaScript">
+   document.write("Hello XHTML!");
+</script>
+
+<!-- Correct XHTML way of writing this is as follows -->
+
+<script type="text/JavaScript">
+   document.write("Hello XHTML!");
+</script>
+
+Nested Tags
+-----------
+
+You must nest all the XHTML tags properly. Otherwise your document is assumed as an incorrect XHTML document. The following example shows the syntax −
+
+<!-- This is invalid in XHTML -->
+<b><i> This text is bold and italic</b></i>
+
+<!-- Correct XHTML way of writing this is as follows -->
+<b><i> This text is bold and italic</i></b>
+
+Element Prohibitions
+--------------------
+The following elements are not allowed to have any other element inside them. This prohibition applies to all depths of nesting. Means, it includes all the descending elements.
+
+Element		Prohibition
+
+<a>		Must not contain other <a> elements.
+<pre>		Must not contain the <img>, <object>, <big>, <small>, <sub>, or <sup> elements.
+<button>	Must not contain the <input>, <select>, <textarea>, <label>, <button>, <form>, <fieldset>, 		     <iframe> or <isindex> elements.
+<label>		Must not contain other <label> elements.
+<form>		Must not contain other <form> elements.
+
+A Minimal XHTML Document
+------------------------
+The following example shows you a minimum content of an XHTML 1.0 document −
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/TR/xhtml1" xml:lang="en" lang="en">
+   <head>
+      <title>Every document must have a title</title>
+   </head>
+	
+   <body>
+      ...your content goes here...
+   </body>
+</html>
+
+
+
+XHTML Documents Must be Well-Formed
+-----------------------------------
+Well-formedness is a new concept introduced by XML. Essentially, this means all the elements must have closing tags and you must nest them properly.
+
+CORRECT: Nested Elements
+------------------------
+<p>Here is an emphasized <em>paragraph</em>.</p>
+
+INCORRECT: Overlapping Elements
+-------------------------------
+<p>Here is an emphasized <em>paragraph.</p></em>
+
+
+Elements and Attributes Must be in Lower Case
+---------------------------------------------
+XHTML documents must use lower case for all HTML elements and attribute names. This difference is necessary because XHTML document is assumed to be an XML document and XML is case-sensitive. For example, <li> and <LI> are different tags.
+
+End Tags are Required for all Elements
+In HTML, certain elements are permitted to omit the end tag. But XML does not allow end tags to be omitted.
+
+CORRECT: Terminated Elements
+----------------------------
+<p>Here is a paragraph.</p><p>here is another paragraph.</p>
+<br><hr/>
+
+INCORRECT: Unterminated Elements
+--------------------------------
+<p>Here is a paragraph.<p>here is another paragraph.
+<br><hr>
+
+Attribute Values Must Always be Quoted
+--------------------------------------
+All attribute values including numeric values, must be quoted.
+
+CORRECT: Quoted Attribute Values
+--------------------------------
+<td rowspan="3">
+
+INCORRECT: Unquoted Attribute Values
+------------------------------------
+<td rowspan=3>
+
+Attribute Minimization
+----------------------
+XML does not support attribute minimization. Attribute-value pairs must be written in full. Attribute names such as compact and checked cannot occur in elements without their value being specified.
+
+CORRECT: Non Minimized Attributes
+---------------------------------
+<dl compact="compact">
+
+INCORRECT: Minimized Attributes
+-------------------------------
+<dl compact>
+
+Whitespace Handling in Attribute Values
+---------------------------------------
+When a browser processes attributes, it does the following −
+
+Strips leading and trailing whitespace.
+
+Maps sequences of one or more white space characters (including line breaks) to a single inter-word space.
+
+Script and Style Elements
+-------------------------
+In XHTML, the script and style elements should not have “<” and “&” characters directly, if they exist; then they are treated as the start of markup. The entities such as “<” and “&” are recognized as entity references by the XML processor for displaying “<” and “&” characters respectively.
+
+Wrapping the content of the script or style element within a CDATA marked section avoids the expansion of these entities.
+
+<script type="text/JavaScript">
+   <![CDATA[
+      ... unescaped VB or Java Script here... ...
+   ]]>
+</script>
+An alternative is to use external script and style documents.
+
+The Elements with id and name Attributes
+----------------------------------------
+XHTML recommends the replacement of name attribute with id attribute. Note that in XHTML 1.0, the name attribute of these elements is formally deprecated, and it will be removed in a subsequent versions of XHTML.
+
+Attributes with Pre-defined Value Sets
+--------------------------------------
+HTML and XHTML both have some attributes that have pre-defined and limited sets of values. For example, type attribute of the input element. In HTML and XML, these are called enumerated attributes. Under HTML 4, the interpretation of these values was case-insensitive, so a value of TEXT was equivalent to a value of text.
+
+Under XHTML, the interpretation of these values is case-sensitive so all of these values are defined in lower-case.
+
+Entity References as Hex Values
+-------------------------------
+HTML and XML both permit references to characters by using hexadecimal value. In HTML these references could be made using either &#Xnn; or &#xnn; and they are valid but in XHTML documents, you must use the lower-case version only such as &#xnn;.
+
+The <html> Element is a Must
+All XHTML elements must be nested within the <html> root element. All other elements can have sub elements which must be in pairs and correctly nested within their parent element. The basic document structure is −
+
+<!DOCTYPE html....>
+
+<html>
+   <head> ... </head>
+   <body> ... </body>
+</html>
+
+XHTML DOCTYPE
+-------------
+The XHTML standard defines three Document Type Definitions (DTDs). The most commonly used and easy one is the XHTML Transitional document.
+
+XHTML 1.0 document type definitions correspond to three DTDs −
+
+Strict
+Transitional
+Frameset
+
+There are few XHTML elements and attributes, which are available in one DTD but not available in another DTD. Therefore, while writing your XHTML document, you must select your XHTML elements or attributes carefully. However, XHTML validator helps you to identify valid and invalid elements and attributes.
+
+Please check XHTML Validations for more detail on this.
+
+XHTML 1.0 Strict
+----------------
+If you are planning to use Cascading Style Sheet (CSS) strictly and avoiding to write most of the XHTML attributes, then it is recommended to use this DTD. A document conforming to this DTD is of the best quality.
+
+If you want to use XHTML 1.0 Strict DTD then you need to include the following line at the top of your XHTML document.
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+XHTML 1.0 Transitional
+----------------------
+If you are planning to use many XHTML attributes as well as few Cascading Style Sheet properties, then you should adopt this DTD and you should write your XHTML document accordingly.
+
+If you want to use XHTML 1.0 Transitional DTD, then you need to include the following line at the top of your XHTML document.
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+XHTML 1.0 Frameset
+------------------
+You can use this when you want to use HTML Frames to partition the browser window into two or more frames.
+
+If you want to use XHTML 1.0 Frameset DTD, then you need to include following line at the top of your XHTML document.
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+Note − No matter what DTD you are using to write your XHTML document; if it is a valid XHTML document, then your document is considered as a good quality document.
+
+
+Html5
+-----
+
+What is HTML Canvas?
+The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.
+
+The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+
+Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+
+Canvas Examples
+---------------
+A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+
+The markup looks like this:
+
+<canvas id="myCanvas" width="200" height="100"></canvas>
+Note: Always specify an id attribute (to be referred to in a script), and a width and height attribute to define the size of the canvas. To add a border, use the style attribute.
+
+What is SVG?
+------------
+SVG stands for Scalable Vector Graphics
+SVG is used to define graphics for the Web
+SVG is a W3C recommendation
+The HTML <svg> Element
+The HTML <svg> element is a container for SVG graphics.
+
+SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+
+
+Ex:
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+</body>
+</html>
+
+
+SVG Rectangle Ex:
+
+<svg width="400" height="100">
+  <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
+
+
+SVG Rounded Rectangle:
+---------------------
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+
+Differences Between SVG and Canvas
+----------------------------------
+SVG is a language for describing 2D graphics in XML.
+
+Canvas draws 2D graphics, on the fly (with a JavaScript).
+
+SVG is XML based, which means that every element is available within the SVG DOM. You can attach JavaScript event handlers for an element.
+
+In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed, the browser can automatically re-render the shape.
+
+Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, it is forgotten by the browser. If its position should be changed, the entire scene needs to be redrawn, including any objects that might have been covered by the graphic
+
+HTML Video:
+----------
+The HTML <video> element is used to show a video on a web page.
+
+Ex:
+
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
+<p>
+Video courtesy of 
+<a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+</p>
+
+</body> 
+</html>
+
+
+
+
+Playing a YouTube Video in HTML
+-------------------------------
+To play your video on a web page, do the following:
+
+Upload the video to YouTube
+Take a note of the video id
+Define an <iframe> element in your web page
+Let the src attribute point to the video URL
+Use the width and height attributes to specify the dimension of the player
+Add any other parameters to the URL (see below)
+Example
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+
+YouTube Autoplay + Mute
+-----------------------
+You can let your video start playing automatically when a user visits the page, by adding autoplay=1 to the YouTube URL. However, automatically starting a video is annoying for your visitors!
+
