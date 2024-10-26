@@ -1,0 +1,892 @@
+crud json server reactjs
+---------------------------
+first create react project
+npx create-react-app employeejson
+
+open employeejson in vscode
+and run
+npm start
+
+install react-router-dom
+npm install react-router-dom
+
+install bootstrap
+npm install bootstrap
+
+
+install json server
+npm install -g json-server
+
+
+open project in vscode
+app.js
+-------
+remove header part
+and add
+<h1>React JS CRUD Operations</h1>
+
+
+add bootstrap in index.js
+-------------------------
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+
+add new file emplisting.js
+---------------------------
+const EmpListing=()=>{
+    return(
+<div>
+    
+</div>
+    );
+}
+export default EmpListing;
+
+---------
+go to app.js file
+--------------------
+we should add routing
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import EmpListing from './Employee';
+
+write the below code under <div> tag
+  <BrowserRouter>
+  <Routes>
+    <Route path='/' element={<EmpListing/>}></Route>
+  </Routes>
+  </BrowserRouter>
+
+
+go to emplisting.js
+----------------------
+under return
+<div className="container">
+    <div className="card">
+        <div className="card-title">
+            <h2>Employee Listing</h2>
+        </div>
+        <div className="card-body">
+            <table className="table table-bordered">
+            <thead className="bg-dark text-white">
+    <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone</td>
+    <td>Action</td>
+    </tr>
+
+            </thead>
+            <tbody>
+                {/* we should fetch data from api */}
+            </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
+
+execute json server
+-----------------------
+json-server --watch db.json --port 8000 
+you can give any port number
+
+
+in vscode
+open db.json file
+remove the existing data except first part
+
+and add this
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "srinivas",
+      "email": "sr@gmail.com",
+      "phone":"9848098480 "
+    }
+  ]
+ 
+}
+---------
+now check in browser jsonserver
+http://localhost:8000/employee
+
+-----
+go to emplisting.js
+----------------------
+useEffect hook
+under const emplisting
+import { useEffect } from "react";
+
+const EmpListing = () => {
+    //define view state variable
+    const[empdata,empdatachange]=useState(null);
+
+    useEffect(() => {
+        fetch("http://localhost:8000/employee").then((res) => {
+            return res.json(); //return json 
+        }).then((resp) => {
+            //call back function
+            //verify are we getting all data
+            empdatachange(resp);
+           // console.log(resp);
+        }).catch((err) => {
+            console.log(err.message);
+        })
+    }, [])
+
+    return (
+        <div className="container">
+            <div className="card">
+                <div className="card-title">
+                    <h2>Employee Listing</h2>
+                </div>
+                <div className="card-body">
+                    <table className="table table-bordered">
+                        <thead className="bg-dark text-white">
+                            <tr>
+                                <td>ID</td>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>Phone</td>
+                                <td>Action</td>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            {/* we should fetch data from api */}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    );
+}
+export default EmpListing;
+------
+take empdata and bind in table  tbody in emplisting.js
+{empdata}
+
+if you get error useState is not defined then 
+write this code
+import React, { useEffect, useState } from "react";
+
+-----------
+The useState hook is used for storing variables that are part of your application's state and will change as the user interacts with your website. The useEffect hook allows components to react to lifecycle events such as mounting to the DOM, re-rendering, and unmounting.
+
+
+-------------------
+add in tbody in emplisting.js
+-------------------------------
+
+
+<tbody>
+                            {/* we should fetch data from api */}
+                        {
+//we may get reading map error then add this line empdata &&
+                            empdata && 
+                        empdata.map(item=>(
+                            <tr key={item.id}>
+<td>{item.id}</td>
+<td>{item.name}</td>
+<td>{item.email}</td>
+<td>{item.phone}</td>
+<td><a className="btn btn-success">Edit</a>
+<a className="btn btn-danger">Remove</a>
+<a className="btn btn-primary">Details</a>
+</td>
+                            </tr>
+                        ))
+                        }
+                        </tbody>
+ 
+----------
+to get space between edit remove delete buttons
+go to app.css file and add
+.btn{
+margin:2px;
+}
+
+---------------
+give the class name for link
+  <div>
+       <Link className="btn btn-success">Add New </Link>
+                    </div>
+                  
+
+--------
+
+create new file EmpCreate.js
+-------------------------------
+const EmpCreate=()=>{
+    return(
+<div>
+    
+</div>
+    );
+}
+
+export default EmpCreate;
+
+---------
+create new file EmpEdit.js
+----------------------------
+const EmpEdit=()=>{
+    return(
+<div>
+    
+</div>
+    );
+}
+
+export default EmpEdit;
+
+----------
+create new file EmpDetail.js
+-------------------------------
+const EmpDetail=()=>{
+    return(
+<div>
+    
+</div>
+    );
+}
+
+export default EmpDetail;
+
+-----------------
+in app.js create routes for empcreate, empdetail and empedit
+
+  <Route path='/employee/create' element={<EmpCreate/>}></Route>
+    <Route path='/employee/detail/:empid' element={<EmpDetail/>}></Route>
+    <Route path='/employee/edit/:empid' element={<EmpEdit/>}></Route>
+
+------------------
+
+
+write code for EmpCreate
+--------------------------
+const EmpCreate=()=>{
+    return(
+<div>
+    <div className="row">
+        <div className="offset-lg-3 col-lg-6">
+            <div className="container">
+                <div className="card">
+                    <div className="card-title">
+                        <h2>Employee Create</h2>
+                    </div>
+                    <div className="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    );
+}
+
+export default EmpCreate;
+
+------------------------
+go to emplisting.js
+---------------------
+under card-body add div class as divbtn and in link to should be given same as app.js file as routing details
+<div className="divbtn">
+                        <Link to="employee/create" className="btn btn-success">Add New </Link>
+                    </div>
+                    
+----------------------
+goto app.css
+---------------
+add new button to be on left side
+.divbtn{
+  float:left;
+}
+----------------------
+goto empcreate page and start writing the code
+under div card-body we should write the code
+  <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>ID</label>
+                                <input className="form-control"></input>
+                            </div>
+</div>
+ <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Name</label>
+                                <input className="form-control"></input>
+                            </div>
+</div>
+ <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Email</label>
+                                <input className="form-control"></input>
+                            </div>
+</div>
+ <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Phone</label>
+                                <input className="form-control"></input>
+                            </div>
+</div>
+ <div className="col-lg-12">
+                            <div className="form-check">
+                            <input type="checkbox" className="form-check-input"></input>
+                                <label className="form-check-label">Is Active</label>
+                                
+                            </div>
+</div>
+ <div className="col-lg-12">
+<div className="form-group">
+
+</div>
+</div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+we will get output in center 
+if we want in left side use style
+ <div className="card" style={{"textAlign":"left"}}> 
+
+after adding text align left code will be as
+
+<div className="card" style={{"textAlign":"left"}}> 
+                    <div className="card-title">
+                        <h2>Employee Create</h2>
+                    </div>
+                    <div className="card-body" >
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>ID</label>
+                                <input className="form-control"></input>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Name</label>
+                                <input className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                             <div className="form-group">
+                                <label>Email</label>
+                                <input className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Phone</label>
+                                <input className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-check">
+                            <input type="checkbox" className="form-check-input"></input>
+                                <label className="form-check-label">Is Active</label>
+                                
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                
+                               </div>
+                               </div>
+                        </div>
+                    </div>
+                    </div>
+
+-----------
+add two buttons save and back
+then the code will be as 
+ <div className="col-lg-12">
+                            <div className="form-group">
+                                <button className="btn btn-success" type="submit">Save</button>
+                                <Link to="/" className="btn btn-danger">Back</Link>
+                               </div>
+                               </div>
+                        
+
+------------
+empcreate will be like this
+add import for link
+
+import { Link } from "react-router-dom";
+const EmpCreate=()=>{
+    return(
+<div>
+    <div className="row">
+        <div className="offset-lg-3 col-lg-6">
+            <div className="container">
+                <div className="card" style={{"textAlign":"left"}}> 
+                    <div className="card-title">
+                        <h2>Employee Create</h2>
+                    </div>
+                    <div className="card-body" >
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>ID</label>
+                                <input className="form-control"></input>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Name</label>
+                                <input className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                             <div className="form-group">
+                                <label>Email</label>
+                                <input className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Phone</label>
+                                <input className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-check">
+                            <input type="checkbox" className="form-check-input"></input>
+                                <label className="form-check-label">Is Active</label>
+                                
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <button className="btn btn-success" type="submit">Save</button>
+                                <Link to="/" className="btn btn-danger">Back</Link>
+                               </div>
+                               </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    );
+}
+
+export default EmpCreate;
+
+-------------------
+
+in empcreate before return we should define our state varibles
+declare an array with one variable and functionname
+const [id,idchange]=useState("");
+    const [name,namechange]=useState("");
+    const [email,emailchange]=useState("");
+    const [phone,phonechange]=useState("");
+    const [active,activechange]=useState(true); //initial value is true
+
+we should bind all these values
+
+after binding it will be 
+
+import { useState } from "react";
+import { Link } from "react-router-dom";
+const EmpCreate=()=>{
+
+    const [id,idchange]=useState("");
+    const [name,namechange]=useState("");
+    const [email,emailchange]=useState("");
+    const [phone,phonechange]=useState("");
+    const [active,activechange]=useState(true);
+
+
+
+    return(
+<div>
+    <div className="row">
+        <div className="offset-lg-3 col-lg-6">
+            <div className="container">
+                <div className="card" style={{"textAlign":"left"}}> 
+                    <div className="card-title">
+                        <h2>Employee Create</h2>
+                    </div>
+                    <div className="card-body" >
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>ID</label>
+                                <input value={id} disabled="disabled" className="form-control"></input>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Name</label>
+                                <input value={name} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                             <div className="form-group">
+                                <label>Email</label>
+                                <input value={email} onChange={e=>emailchange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Phone</label>
+                                <input value={phone} onChange={e=>phonechange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-check">
+                            <input checked={name} onChange={e=>namechange(e.target.checked)} type="checkbox" className="form-check-input"></input>
+                                <label className="form-check-label">Is Active</label>
+                                
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <button className="btn btn-success" type="submit">Save</button>
+                                <Link to="/" className="btn btn-danger">Back</Link>
+                               </div>
+                               </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    );
+}
+
+export default EmpCreate;
+-------------
+in empcreate change div =container as form tag and add onsubmit for form tag
+ after form tag it looks like
+
+we should define first onsubmit 
+
+code is as follows
+
+import { useState } from "react";
+import { Link } from "react-router-dom";
+const EmpCreate=()=>{
+
+    const [id,idchange]=useState("");
+    const [name,namechange]=useState("");
+    const [email,emailchange]=useState("");
+    const [phone,phonechange]=useState("");
+    const [active,activechange]=useState(true);
+
+    const handlesubmit=(e)=>{
+            e.preventDefault();
+            console.log({id,name,email,phone,active});
+    }
+
+
+    return(
+<div>
+    <div className="row">
+        <div className="offset-lg-3 col-lg-6">
+            <form className="container" onSubmit={handlesubmit}>
+                <div className="card" style={{"textAlign":"left"}}> 
+                    <div className="card-title">
+                        <h2>Employee Create</h2>
+                    </div>
+                    <div className="card-body" >
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>ID</label>
+                                <input value={id} disabled="disabled" className="form-control"></input>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Name</label>
+                                <input value={name} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                             <div className="form-group">
+                                <label>Email</label>
+                                <input value={email} onChange={e=>emailchange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Phone</label>
+                                <input value={phone} onChange={e=>phonechange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-check">
+                            <input checked={active} onChange={e=>activechange(e.target.checked)} type="checkbox" className="form-check-input"></input>
+                                <label className="form-check-label">Is Active</label>
+                                
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <button className="btn btn-success" type="submit">Save</button>
+                                <Link to="/" className="btn btn-danger">Back</Link>
+                               </div>
+                               </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    );
+}
+
+export default EmpCreate;
+
+-----------
+how to save data
+
+use fetch method with port number
+use navigate to redirect
+
+const navigate=useNavigate(); 
+
+ const empdata={name,email,phone,active};//here id is not required created an object empdata
+           
+
+
+           fetch("http://localhost:8000/employee",
+           {
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(empdata)
+            }).then((res)=>{
+                alert("Saved successfully");
+                navigate('/');
+            }).catch((err)=>{
+                console.log(err.message)
+            })
+    }
+
+
+-------
+data will be saved
+
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+const EmpCreate=()=>{
+
+    const [id,idchange]=useState("");
+    const [name,namechange]=useState("");
+    const [email,emailchange]=useState("");
+    const [phone,phonechange]=useState("");
+    const [active,activechange]=useState(true);
+    const navigate=useNavigate(); 
+    const handlesubmit=(e)=>{
+            e.preventDefault();
+           // console.log({id,name,email,phone,active});
+           const empdata={name,email,phone,active};//here id is not required created an object empdata
+           
+
+
+           fetch("http://localhost:8000/employee",
+           {
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(empdata)
+            }).then((res)=>{
+                alert("Saved successfully");
+                navigate('/');
+            }).catch((err)=>{
+                console.log(err.message)
+            })
+    }
+
+
+    return(
+<div>
+    <div className="row">
+        <div className="offset-lg-3 col-lg-6">
+            <form className="container" onSubmit={handlesubmit}>
+                <div className="card" style={{"textAlign":"left"}}> 
+                    <div className="card-title">
+                        <h2>Employee Create</h2>
+                    </div>
+                    <div className="card-body" >
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>ID</label>
+                                <input value={id} disabled="disabled" className="form-control"></input>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Name</label>
+                                <input value={name} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                             <div className="form-group">
+                                <label>Email</label>
+                                <input value={email} onChange={e=>emailchange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Phone</label>
+                                <input value={phone} onChange={e=>phonechange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-check">
+                            <input checked={active} onChange={e=>activechange(e.target.checked)} type="checkbox" className="form-check-input"></input>
+                                <label className="form-check-label">Is Active</label>
+                                
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <button className="btn btn-success" type="submit">Save</button>
+                                <Link to="/" className="btn btn-danger">Back</Link>
+                               </div>
+                               </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    );
+}
+
+export default EmpCreate;
+
+-----------------------
+if we want to perform validations then we can do it
+
+if we write required default message will be diplayed
+ <input required value={name} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+
+
+if we want user defined message
+ <input required value={name} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+                                {name.length==0 && <span className="text-danger">Enter the name</span>}
+                            
+if we write above code when we refresh the page also the text enter the name will be displayed which should not happen to overcome that
+use usestate
+const [validation,valchange]=useState(false);
+
+then the code should be written as 
+<input required value={name} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+                                {name.length==0 && validation && <span className="text-danger">Enter the name</span>}
+                            
+
+--------
+after validation code is 
+
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+const EmpCreate=()=>{
+
+    const [id,idchange]=useState("");
+    const [name,namechange]=useState("");
+    const [email,emailchange]=useState("");
+    const [phone,phonechange]=useState("");
+    const [active,activechange]=useState(true);
+    const [validation,valchange]=useState(false);
+
+
+    const navigate=useNavigate(); 
+    const handlesubmit=(e)=>{
+            e.preventDefault();
+           // console.log({id,name,email,phone,active});
+           const empdata={name,email,phone,active};//here id is not required created an object empdata
+           
+
+
+           fetch("http://localhost:8000/employee",
+           {
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(empdata)
+            }).then((res)=>{
+                alert("Saved successfully");
+                navigate('/');
+            }).catch((err)=>{
+                console.log(err.message)
+            })
+    }
+
+
+    return(
+<div>
+    <div className="row">
+        <div className="offset-lg-3 col-lg-6">
+            <form className="container" onSubmit={handlesubmit}>
+                <div className="card" style={{"textAlign":"left"}}> 
+                    <div className="card-title">
+                        <h2>Employee Create</h2>
+                    </div>
+                    <div className="card-body" >
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>ID</label>
+                                <input value={id} disabled="disabled" className="form-control"></input>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Name</label>
+                                <input required value={name} onMouseDown={e=>valchange(true)} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+                                {name.length==0 && validation && <span className="text-danger">Enter the name</span>}
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                             <div className="form-group">
+                                <label>Email</label>
+                                <input value={email} onChange={e=>emailchange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <label>Phone</label>
+                                <input value={phone} onChange={e=>phonechange(e.target.value)} className="form-control"></input>
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-check">
+                            <input checked={active} onChange={e=>activechange(e.target.checked)} type="checkbox" className="form-check-input"></input>
+                                <label className="form-check-label">Is Active</label>
+                                
+                            </div>
+                            </div>
+                            <div className="col-lg-12">
+                            <div className="form-group">
+                                <button className="btn btn-success" type="submit">Save</button>
+                                <Link to="/" className="btn btn-danger">Back</Link>
+                               </div>
+                               </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    );
+}
+
+export default EmpCreate;
+
+
+------------------------------
+
+
